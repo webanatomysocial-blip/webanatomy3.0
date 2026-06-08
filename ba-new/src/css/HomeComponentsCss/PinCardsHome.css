@@ -1,0 +1,172 @@
+.pin-cards-container {
+    width: 100%;
+    background-color: var(--black);
+    overflow-x: hidden;
+    position: relative;
+    padding: 100px 75px;
+}
+
+.pin-card-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; 
+    perspective: 1500px;
+}
+.pin-card-inner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    border-radius: 40px;
+    transform-origin: center center;
+    transform: translateZ(0);
+}
+
+/* Blurred background effect inside the card */
+.pin-card-bg {
+    position: absolute;
+    inset: -10%; /* Much larger to cover edges during 3D rotation/scale */
+    background-size: cover;
+    background-position: center;
+    filter: blur(40px) brightness(0.6);
+    z-index: 0;
+}
+
+.pin-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    opacity: 0; /* GSAP will animate this */
+    pointer-events: none;
+}
+
+.pin-card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 75px; 
+    color: var(--white);
+}
+
+.pc-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pc-desc {
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.pc-left-bottom .pc-count {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    display: block;
+    padding-bottom: 10px;
+    width: max-content;
+    position: relative;
+}
+
+.pc-left-bottom .pc-count::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pc-title {
+    font-size: min(4vw, 64px) !important;
+    word-break: break-word;
+    line-height: 1.1 !important;
+}
+
+.pc-center {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pc-center-image {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.pc-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pc-year span, .pc-services span {
+    display: block;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.pc-year h3 {
+    margin-bottom: 40px;
+}
+
+.pc-services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pc-services li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    .pin-card-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+    .pc-left, .pc-right {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .pc-center {
+        width: 100%;
+        height: 40%;
+    }
+    .pc-left-bottom .pc-count::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .pc-left-bottom .pc-count {
+        margin: 0 auto 20px;
+    }
+}

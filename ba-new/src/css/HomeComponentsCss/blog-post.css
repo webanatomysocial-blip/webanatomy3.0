@@ -1,0 +1,123 @@
+.pod-post-page {
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.pod-sticky-header {
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pod-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pod-header-title {
+    font-family: var(--font-geist), sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pod-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons-header {
+    display: flex;
+    gap: 15px;
+}
+
+.scroll-progress-bar {
+    height: 3px;
+    background-color: #4da6ff;
+    width: 0;
+}
+
+.pod-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.pod-main-content {
+    flex: 3;
+}
+
+.pod-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 150px;
+    height: fit-content;
+}
+
+.go-back-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: var(--font-geist), sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.go-back-btn:hover {
+    color: #4da6ff;
+}
+
+.pod-split-header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pod-title-section h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.pod-hero-img-container {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.pod-hero-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .pod-split-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .pod-title-section {
+        flex: 1;
+    }
+    .pod-hero-img-container {
+        flex: 1;
+    }
+}

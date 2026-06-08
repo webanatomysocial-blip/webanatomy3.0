@@ -1,0 +1,84 @@
+.hero_container{
+    color: white;
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #3c0660, #4b0082, #8d2fff,#401f59, #9d4edd, #4b0082, #452762);
+    background-size: 400% 400%;
+    animation: purpleGradientMove 8s ease infinite;
+}
+
+@keyframes purpleGradientMove {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.rating img{
+    filter: brightness(0) invert(1);
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+     padding: 100px 75px ;
+    flex: 1;
+    gap: 10px;
+}
+.topHero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    width: 50%;
+    margin-top: 50px;
+}
+.bodyText{
+    width: 600px;
+    text-align: left;
+}
+.bottomHero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 140px !important;
+}
+.video{
+    width: 30vw;
+    height: 30vh;
+}
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Letter-by-letter fade-up animation */
+.animatedWord {
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: bottom;
+    color : black ;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: letterFadeUp 0.5s ease forwards;
+}
+
+@keyframes letterFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

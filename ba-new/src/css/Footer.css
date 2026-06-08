@@ -1,0 +1,303 @@
+/* src/css/Footer.css */
+
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 100px 75px; /* Add padding-bottom to separate content columns from floor */
+  font-family: var(--font-geist), sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 720px; /* High container to give clovers massive room to bounce! */
+}
+
+/* Layer the content columns above the canvas, but disable click capture on the parent wrappers */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through empty spaces to background clovers */
+}
+
+/* Left Column - Large Typography */
+.footer-left {
+  flex: 2 1 400px;
+  pointer-events: none;
+}
+
+.footer-title {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.25;
+  /* letter-spacing: -0.03em; */
+  text-transform: uppercase;
+}
+
+.purple-gradient-text {
+  background: linear-gradient(90deg, #ECE0FE 20%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.purple-solid-text {
+  color: #a78bfa;
+}
+
+.purple-deep-text {
+  color: #512594;
+}
+
+/* Middle Column - Menu Links */
+.footer-middle {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  pointer-events: none;
+}
+
+.footer-link {
+  font-size: 15px;
+  color: #999999;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  width: fit-content;
+  pointer-events: auto; /* Enable link clicks */
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+/* Right Column - Interactions */
+.footer-right {
+  flex: 2 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  pointer-events: none;
+}
+
+/* Email Box */
+.email-box {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  pointer-events: none;
+}
+
+.email-input {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s;
+  pointer-events: auto; /* Enable input writing */
+}
+
+.email-input:focus {
+  border-color: rgba(139, 92, 246, 0.4);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.get-started-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: auto; /* Enable button clicks */
+}
+
+.get-started-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.03);
+}
+
+/* Follow Us Row */
+.follow-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: #999999;
+  pointer-events: none;
+}
+
+.social-squares {
+  display: flex;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.social-square-link {
+  background-color: #ffffff;
+  color: #000000;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: auto; /* Enable social button clicks */
+}
+
+.social-square-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.social-square-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Location details */
+.location-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 14px;
+  color: #999999;
+  pointer-events: none;
+}
+
+.location-details {
+  line-height: 1.5;
+  color: #bbbbbb;
+  font-weight: 300;
+}
+
+/* --- Full-height Matter-JS Falling Images Absolute Wrapper --- */
+.falling-images-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Sits completely behind the content grids */
+  margin-top: 0;
+  border-top: none;
+  cursor: grab;
+  pointer-events: auto; /* Fully grabable empty space */
+  touch-action: pan-y;
+}
+
+.falling-images-wrapper:active {
+  cursor: grabbing;
+}
+
+.falling-images-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto; /* Fully interactable canvas element */
+  touch-action: pan-y;
+}
+
+/* Fallback visible overlay row in case JS isn't loaded yet */
+.falling-images-static {
+  position: absolute;
+  bottom: 80px; /* Position clovers near the bottom floor in fallback */
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.falling-images-static.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.static-clover {
+  height: 130px;
+  width: auto;
+  opacity: 0.8;
+}
+
+/* Small copyright details layered cleanly above the canvas */
+.footer-bottom {
+  /* max-width: 1400px; */
+  margin: 20px auto 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #ffffff;
+  z-index: 10;
+  position: relative;
+  pointer-events: none;
+}
+
+.footer-bottom-copy,
+.footer-bottom-design {
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    gap: 40px;
+  }
+  .footer-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 60px 4% 120px 4%;
+    min-height: 800px;
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer-title {
+    font-size: 26px;
+  }
+  .email-box {
+    max-width: 100%;
+  }
+  .static-clover {
+    height: 90px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

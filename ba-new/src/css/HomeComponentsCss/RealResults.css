@@ -1,0 +1,142 @@
+.realResultsSection {
+  background-color: var(--white);
+  padding: 100px 75px;
+}
+
+.realResultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
+.brandSectionLabel {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.realResultsBrandRow {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.realResultsBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.realResultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.realResultsCard {
+  position: relative;
+  min-height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+
+
+.realResultsCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.90) 100%);
+  z-index: 1;
+}
+
+.realResultsCardLogo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.realResultsCardCopy {
+  position: relative;
+  z-index: 2;
+  padding: 32px 28px;
+}
+
+.realResultsCardCopy h3 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.realResultsCardCopy p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .realResultsSection {
+    padding: 60px 40px;
+  }
+  .realResultsHeader {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+  }
+  .realResultsBrandSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 30px;
+  }
+  .realResultsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .realResultsSection {
+    padding: 40px 20px;
+  }
+  .realResultsGrid {
+    grid-template-columns: 1fr;
+  }
+  .realResultsCard {
+    min-height: 340px;
+  }
+}

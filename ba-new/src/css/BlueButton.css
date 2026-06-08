@@ -1,0 +1,83 @@
+.blue-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(81, 37, 148);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px; /* Pill shape */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 54px; 
+  font-family: var(--font-geist), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blue-button:hover {
+  background-color: rgb(245, 245, 245);
+  color: #000000;
+}
+
+.blue-button-text-wrapper {
+  position: relative;
+  height: 24px; /* Height matching text line-height */
+  overflow: hidden;
+  display: block;
+}
+
+.blue-button-text-primary {
+  display: block;
+  line-height: 24px;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.blue-button-text-secondary {
+  display: block;
+  line-height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(50px); /* 50px below the center line */
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.blue-button:hover .blue-button-text-primary {
+  transform: translateY(-50px); /* Primary text goes up -50px */
+}
+
+.blue-button:hover .blue-button-text-secondary {
+  transform: translateY(0); /* Secondary text moves up to original position */
+}
+
+/* --- ICON STYLES --- */
+.blue-button-icon-wrapper {
+  margin-left: 15px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blue-button-icon {
+  color: rgb(81, 37, 148); /* Primary blue/purple arrow */
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover effect reverses colors for the icon wrapper */
+.blue-button:hover .blue-button-icon-wrapper {
+  background-color: rgb(81, 37, 148);
+}
+
+.blue-button:hover .blue-button-icon {
+  color: #ffffff;
+}

@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Rechteck;
+    src: url(../../assets//fonts//rechteck/Rechteck.otf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.services-home-section{
+    width: 100%;
+    height: 200vh;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: white;
+
+}
+.service-home-box-parent{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+        background-color: var(--black);
+        border-radius: 20px;
+
+    top: 0;
+    left: 0;
+
+       perspective: 1200px;
+
+}
+.service-home-box-1{
+    width:200px ;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ border-radius: 20px;
+ position: absolute;
+ transform: translate(-5% , -60%);
+ box-shadow:0px 20px 30px rgba(0, 0, 0, 1);
+ top: 60%;
+ left: 5%;
+    background: linear-gradient(180deg, #512594 100%, #000000 80%);
+    z-index: 10;
+        transform-style: preserve-3d;
+        padding: 20px;
+        
+
+}
+.service-home-box-1 h3{
+    font-family: Rechteck;
+    font-size: 120px;
+    text-align: center;
+    
+}
+.service-box-number{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.service-heading-middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+
+}

@@ -1,0 +1,82 @@
+.zoom-wrapper {
+    position: relative;
+    height: 620vh;
+    width: 100%;
+}
+
+.zoom-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.zoom-bg-static {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.zoom-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    overflow: hidden;
+
+}
+
+.zoom-image {
+    height: 600px;
+    width: 1200px;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+}
+
+.zoom-layer--square {
+    height: 100vh;
+}
+
+.zoom-layer--square .zoom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .zoom-wrapper {
+        height: auto;
+    }
+
+    .zoom-sticky {
+        position: relative;
+        height: auto;
+    }
+
+    .zoom-bg-static,
+    .zoom-layer,
+    .zoom-layer--square {
+        position: relative;
+        transform: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .zoom-layer--square {
+        top: auto;
+        left: auto;
+        aspect-ratio: unset;
+    }
+}
+
+@media (max-width: 520px) {
+    .zoom-sticky {
+        overflow: visible;
+    }
+}
