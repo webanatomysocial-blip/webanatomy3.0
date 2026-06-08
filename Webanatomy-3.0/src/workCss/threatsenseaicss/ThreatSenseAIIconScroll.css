@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+.ts-icon-scroll-main-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.ts-icon-scroll-left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: url(../../WorkImages/threatsenseai/svgs/Behance.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ts-icon-scroll-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ts-icon-scroll-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ts-icon-scroll-right {
+  flex: 1;
+  background-color: var(--white-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ts-icon-scroll-center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 53%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-icon-scroll-center-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.ts-icon-scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(280px);
+}
+
+.ts-icon-scroll-text {
+  font-size: 52px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0;
+  letter-spacing: -2px;
+  font-family: "Inter", sans-serif;
+}

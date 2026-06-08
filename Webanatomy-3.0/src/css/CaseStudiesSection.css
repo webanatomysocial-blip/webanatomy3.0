@@ -1,0 +1,27 @@
+.case-studies-section {
+  padding: 100px 75px 150px 75px;
+  background-color: #fcfcfc;
+}
+
+.case-studies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.case-studies-highlights {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}

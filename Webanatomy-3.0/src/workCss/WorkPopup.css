@@ -1,0 +1,255 @@
+.work-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease-in-out,
+    visibility 0.5s ease-in-out;
+}
+
+.work-popup-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-popup-content {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.work-popup-content.slide-in {
+  transform: translateX(0);
+}
+
+.work-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.work-popup-close:hover {
+  background: #000;
+  color: #fff;
+}
+
+.work-popup-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  color: #000;
+}
+
+/* Custom Scrollbar for the popup */
+.work-popup-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.work-popup-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.work-popup-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.work-popup-hero {
+  width: 100%;
+  height: 500px;
+}
+
+.work-popup-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-popup-info {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.work-popup-info .head-text-white,
+.work-popup-info .para-text-white,
+.work-popup-info .sub-small-head-white,
+.work-popup-info .sub-para-text-white,
+.work-popup-info .sub-head-text-white {
+  color: #000 !important;
+}
+
+.work-popup-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-popup-category {
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.work-popup-bookmark {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.work-popup-services {
+  margin-top: 20px;
+}
+
+.services-chips {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.service-chip {
+  padding: 8px 24px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.work-popup-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.work-popup-gallery img:last-child {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.work-popup-footer {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.work-popup-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work-popup-cta p a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.work-popup-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.white-bg-btn {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+  padding: 12px 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.white-bg-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.popup-nav-btns {
+  display: flex;
+  gap: 1px;
+  border: 1px solid #eee;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+}
+
+.nav-btn:hover {
+  background: #f9f9f9;
+}
+
+@media (max-width: 1024px) {
+  .work-popup-content {
+    max-width: 80%;
+  }
+  .work-popup-info {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-popup-content {
+    max-width: 100%;
+  }
+  .work-popup-hero {
+    height: 350px;
+  }
+  .work-popup-gallery {
+    grid-template-columns: 1fr;
+  }
+  .work-popup-gallery img:last-child {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,18 @@
+/* src/workCss/VideoExpand.css */
+
+.expand-video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.resizable-video {
+  width: 90%;
+  height: 100vh;
+  object-fit: cover;
+  will-change: width;
+}

@@ -1,0 +1,143 @@
+.our-process-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F8F8F8;
+    overflow: hidden;
+    font-family: var(--font-inter), sans-serif;
+   
+}
+
+.op-header-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    z-index: 10;
+}
+
+.op-header-bottom {
+    z-index: 10;
+}
+
+.op-track-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.op-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 32px;
+    padding-right: 100px;
+    width: max-content;
+    height: 100%;
+    align-items: center;
+    will-change: transform;
+}
+
+.op-header-container {
+    width: 450px;
+    height: 420px;
+    flex-shrink: 0;
+    position: relative ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 75px;
+
+}
+
+.op-card {
+    position: relative ;
+    width: 440px;
+    height: 440px; 
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering everything */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    flex-shrink: 0;
+}
+
+.op-card-number {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background-color: #F4F4F4;
+    padding: 15px 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin: 0; /* Override any margin */
+}
+
+.op-card-image-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.op-card-image {
+    max-width: 80%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.op-card-title {
+    text-align: center;
+    margin-top: 50px; /* Push down to avoid absolute number */
+    margin-bottom: 10px;
+}
+
+.op-card-desc {
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+.op-header-bottom h2 {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .op-track {
+        padding-left: 60px;
+    }
+    .op-header-top, .op-header-bottom {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        padding: 40px 60px;
+    }
+    .op-header-bottom {
+        padding-top: 0;
+    }
+    .our-process-section {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .op-track-wrapper {
+        position: relative;
+        top: auto;
+        transform: none;
+    }
+}

@@ -1,0 +1,70 @@
+/* Main container for the scrolling section */
+.context-container {
+  width: 100%;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* Flex container for the 4 columns */
+.context-img-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+  gap: 20px;
+}
+
+/* Individual columns */
+.context-column {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+/* Content cards within columns */
+.context-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 250px;
+  /* Base height for blank slots */
+  display: flex;
+  flex-direction: column;
+}
+
+.context-card img {
+  width: 100%;
+  height: 600px;
+  aspect-ratio: 4/5;
+  /* Keep consistent proportions */
+  display: block;
+  object-fit: contain;
+}
+
+.context-card-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+}
+
+/* Spacer for the whole scrolling page height to trigger ScrollTrigger */
+.scroll-spacer {
+  height: 200vh;
+}
+
+/* Aesthetic improvements for the cards */
+.context-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.context-card-content h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}

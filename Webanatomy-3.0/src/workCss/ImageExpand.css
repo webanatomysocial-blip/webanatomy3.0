@@ -1,0 +1,24 @@
+/* src/workCss/ImageExpand.css */
+
+.expand-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  /* padding-bottom: 100px; */
+}
+
+.resizable-image {
+  width: 90%;
+  height: 100vh;
+  object-fit: cover;
+  will-change: width;
+}
+
+@media (max-width: 768px) {
+  .resizable-image {
+    height: 60vh;
+  }
+}

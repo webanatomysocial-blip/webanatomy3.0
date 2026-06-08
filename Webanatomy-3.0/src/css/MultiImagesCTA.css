@@ -1,0 +1,99 @@
+.micta-content {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  cursor: crosshair; /* To give an artistic feel while trailing */
+}
+
+.micta-content__title {
+
+  z-index: 10000;
+  pointer-events: none;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  text-align: center;
+  font-size: 200px !important;
+  font-weight: 700 !important;
+
+}
+
+.micta-content__img {
+  max-width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity, ;
+  object-fit: cover;
+  /* Optional: add some shadow to make images pop off each other */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.micta-ask-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background-color: white ;
+}
+
+.micta-ask-title {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.micta-ask-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.micta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+      width: 290px;
+    height: 80px;
+  border-radius: 50px;
+  position: relative;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.micta-btn span{
+    font-size: 26px;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 500;
+
+}
+.micta-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.micta-btn--claude {
+  background-color: #d97757;
+  color: #fff;
+  border: none;
+}
+
+.micta-btn--chatgpt {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}

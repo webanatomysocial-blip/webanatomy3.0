@@ -1,0 +1,45 @@
+.Text-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.text-container {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.line {
+  white-space: nowrap;
+}
+
+.char-span {
+  display: inline-block;
+  color: #444444; /* Initial dim color */
+}
+
+.space {
+  display: inline-block;
+  width: 0.3em;
+}
+
+.gradient-char {
+  /* Provide a subtle gradient for the target text */
+  background: linear-gradient(90deg, #bbbbbb, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #444444; 
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    font-size: 24px;
+  }
+  .line {
+    white-space: normal;
+  }
+}

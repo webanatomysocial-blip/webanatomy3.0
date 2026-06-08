@@ -1,0 +1,21 @@
+.left-reverse-phone-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 100px 0;
+  background-color: var(--black-color);
+  overflow: hidden;
+}
+.left-reverse-phone-left img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  rotate: -180deg;
+}
+.left-reverse-phone-right img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}

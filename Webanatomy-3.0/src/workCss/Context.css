@@ -1,0 +1,26 @@
+.context-section {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  padding: 0px 400px 0px 400px;
+  background-color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .context-section {
+    padding: 60px 24px;
+    height: auto;
+  }
+}
+
+.context-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding-top: 20px;
+}

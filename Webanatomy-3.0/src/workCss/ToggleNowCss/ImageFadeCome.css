@@ -1,0 +1,78 @@
+.ImageFadeCome-work-section {
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  /* overflow: hidden; */
+  padding: 100px;
+  background-color: white;
+  position: relative;
+}
+.ImageFadeCome-sticky-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.ImageFadeCome-sticky-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.ImageFadeCome-sticky-container-left {
+  width: 340px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  background-color: white;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+}
+.ImageFadeCome-sticky-container-left-bg-img {
+  width: 500px;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.ImageFadeCome-screen1-img {
+  width: 300px;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  z-index: 5;
+}
+.ImageFadeCome-screen2-img {
+  width: 300px;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  z-index: 1;
+}
+.textscallCome {
+  opacity: 0;
+  transform: scale(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

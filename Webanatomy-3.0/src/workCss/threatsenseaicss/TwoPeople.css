@@ -1,0 +1,73 @@
+/* src/workCss/threatsenseaicss/TwoPeople.css */
+
+.motham-container {
+  width: 100%;
+  height: 250vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: var(--white-color);
+}
+
+.end-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.img-1 {
+  width: 600px;
+  height: auto;
+  border: 10px solid black !important;
+  opacity: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-4 {
+  width: 600px;
+  height: auto;
+  border: 10px solid black !important;
+  opacity: 1;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-2 {
+  margin-top: -70px;
+  width: 1100px;
+  height: auto;
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  scale: 1;
+  z-index: 20;
+}
+
+.img-3 {
+  margin-top: -100px;
+  width: 1100px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  scale: 1;
+  z-index: 20;
+}
+
+.section-left-right {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3e3e3;
+  margin: 0 auto;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+}

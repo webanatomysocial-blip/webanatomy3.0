@@ -1,0 +1,135 @@
+.worker-details-section {
+  display: flex;
+  padding: 100px;
+  gap: 100px;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.worker-services-column {
+  flex: 1;
+}
+
+.worker-services-column h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.worker-services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.service-pill {
+  padding: 8px 25px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.service-pill:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.worker-info-column {
+  flex: 2;
+}
+
+.worker-info-column h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.worker-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.worker-stats-table {
+  width: 100%;
+  border-top: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.stat-label {
+  font-weight: 300;
+  color: #333;
+  font-size: 18px;
+}
+
+.stat-value {
+  color: #333;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.view-live-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 300;
+  font-size: 18px;
+  border-bottom: 2px solid #333;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
+.view-live-link span {
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .worker-details-section {
+    flex-direction: column;
+    padding: 60px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .worker-details-section {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .worker-info-column h2 {
+    font-size: 32px;
+  }
+
+  .worker-services-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .worker-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .stat-label,
+  .stat-value {
+    font-size: 14px;
+  }
+
+  .view-live-link {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,96 @@
+.home-banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Background video or placeholder */
+.home-banner-bg {
+position: absolute;
+    top: 0;
+    right: 200px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+   
+}
+.HomeBannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Fades out the bottom so text is readable, and lightly fades edges */
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 40%),
+              radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+}
+
+.home-banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 60px 75px;
+  z-index: 1;
+}
+
+.home-banner-subtitle {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-inter), sans-serif;
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.home-banner-bottom-right {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .home-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .home-banner-bottom-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .home-banner-bottom-right button {
+    width: 100%;
+  }
+}
+
+@keyframes spin-continuous {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-star {
+  animation: spin-continuous 6s linear infinite;
+  display: inline-block; /* Required for transform */
+  margin-right: 8px;
+}
