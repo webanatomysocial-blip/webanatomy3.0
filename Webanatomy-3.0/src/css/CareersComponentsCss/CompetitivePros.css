@@ -1,0 +1,160 @@
+/* ======================================================
+   CompetitivePros.css
+   ====================================================== */
+
+.cpros-section {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 100px 75px;
+  box-sizing: border-box;
+}
+
+.cpros-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ── Header row ── */
+.cpros-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.cpros-title {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #ffffff;
+}
+
+.cpros-tag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+
+/* ── Cards Grid ── */
+.cpros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cpros-card {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
+/* ── Custom Yellow Icons ── */
+.cpros-card-icon-wrapper {
+  color: #ffdd00;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.cpros-card:hover .cpros-card-icon-wrapper {
+  transform: scale(1.08);
+}
+
+.cpros-card-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* ── Card Typography ── */
+.cpros-card-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+}
+
+.cpros-card-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #a3a3a3;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 1024px) {
+  .cpros-section {
+    padding: 80px 40px;
+  }
+
+  .cpros-grid {
+    gap: 20px;
+  }
+
+  .cpros-card {
+    padding: 40px 30px;
+  }
+
+  .cpros-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cpros-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .cpros-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cpros-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cpros-section {
+    padding: 60px 20px;
+  }
+
+  .cpros-title {
+    font-size: 32px;
+  }
+
+  .cpros-card {
+    padding: 35px 24px;
+  }
+
+  .cpros-card-title {
+    font-size: 20px;
+  }
+
+  .cpros-card-desc {
+    font-size: 14px;
+  }
+}

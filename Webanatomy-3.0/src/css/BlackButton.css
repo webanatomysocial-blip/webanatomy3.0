@@ -1,11 +1,11 @@
-.white-button {
+.black-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0 40px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
   border-radius: 9999px; /* Pill shape */
   cursor: pointer;
   position: relative;
@@ -17,26 +17,26 @@
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.white-button:hover {
-
+.black-button:hover {
+  background-color: transparent;
   color: #000000;
 }
 
-.white-button-text-wrapper {
+.black-button-text-wrapper {
   position: relative;
   height: 24px; /* Height matching text line-height */
   overflow: hidden;
   display: block;
 }
 
-.white-button-text-primary {
+.black-button-text-primary {
   display: block;
   line-height: 24px;
   transform: translateY(0);
   transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.white-button-text-secondary {
+.black-button-text-secondary {
   display: block;
   line-height: 24px;
   position: absolute;
@@ -47,10 +47,10 @@
   transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.white-button:hover .white-button-text-primary {
+.black-button:hover .black-button-text-primary {
   transform: translateY(-50px); /* Primary text goes up -50px */
 }
 
-.white-button:hover .white-button-text-secondary {
+.black-button:hover .black-button-text-secondary {
   transform: translateY(0); /* Secondary text moves up to original position */
 }

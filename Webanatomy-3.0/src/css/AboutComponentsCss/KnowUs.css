@@ -1,0 +1,140 @@
+.know-us-section {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 100px 0 0 0;
+  /* padding top only; bottom is 0 so image runs full height to viewport end */
+  width: 100%;
+}
+
+.know-us-heading {
+  padding-left: 75px;
+  /* Exactly 75px left padding and nothing else */
+  margin-bottom: 45px;
+}
+
+/* Fullscreen Zoom Image Wrapper */
+.know-us-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Covers 100vh height i.e entire screen */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.know-us-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+}
+
+/* Gradient dark overlay at the bottom for text readability */
+.know-us-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.45) 40%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Stats overlay layout - aligned at 75px from the left edge */
+.know-us-stats-overlay {
+  position: absolute;
+  bottom: 80px;
+  left: 75px;
+  /* Aligns exactly with the heading left padding */
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  z-index: 3;
+}
+
+.know-us-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+}
+
+
+
+.know-us-stat-num {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 130px;
+  /* Increased number size */
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.know-us-stat-label {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: -0.01em;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+  .know-us-heading {
+    padding-left: 40px;
+  }
+
+  .know-us-stats-overlay {
+    left: 40px;
+    gap: 50px;
+  }
+
+  .know-us-stat-num {
+    font-size: 82px;
+  }
+}
+
+@media (max-width: 768px) {
+  .know-us-heading {
+    padding-left: 24px;
+    margin-bottom: 30px;
+  }
+
+  .know-us-image-wrapper {
+    height: auto;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .know-us-bg-image {
+    height: 100%;
+  }
+
+  .know-us-stats-overlay {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 30px 24px;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    background-color: #000000;
+  }
+
+  .know-us-overlay {
+    display: none;
+  }
+
+  .know-us-stat-num {
+    font-size: 72px;
+  }
+}

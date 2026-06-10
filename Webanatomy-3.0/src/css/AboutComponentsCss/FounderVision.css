@@ -1,0 +1,163 @@
+/* ======================================================
+   FounderVision.css
+   ====================================================== */
+
+.fv-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 100px 75px 80px 75px;
+  box-sizing: border-box;
+}
+
+.fv-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ── Header row ── */
+.fv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.fv-title {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #000000;
+}
+
+.fv-tag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+
+/* ── 50/50 Split Grid ── */
+.fv-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ── LEFT panel ── */
+.fv-left {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Portrait ratio matching mockup height */
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #f5f2ef;
+}
+
+.fv-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── RIGHT panel: Black bio card ── */
+.fv-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  background-color: #000000;
+  border-radius: 6px;
+  padding: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Top area ── */
+.fv-right-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.fv-name {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.fv-role {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 24px 0;
+}
+
+.fv-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Bottom area ── */
+.fv-right-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.fv-bio-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.fv-bio-text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 1024px) {
+  .fv-section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fv-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fv-left {
+    height: 380px;
+  }
+
+  .fv-right {
+    height: auto;
+    min-height: 380px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fv-section {
+    padding: 60px 20px;
+  }
+
+  .fv-title {
+    font-size: 36px;
+  }
+}

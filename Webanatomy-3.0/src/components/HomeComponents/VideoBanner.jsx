@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import "../../css/HomeComponentsCss/VideoBanner.css";
 import { gsap } from "gsap/gsap-core";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollOverlay from "./ScrollOverlay";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,9 +49,7 @@ export default function VideoBanner() {
                 playsInline
             ></video>
 
-            <div className="videooverlaywidth100 video-scroll-up"></div>
-            <div className="videooverlaywidth60 video-scroll-up"></div>
-            <div className="videooverlaywidth40 video-scroll-up"></div>
+            <ScrollOverlay color="black" />
         </div>
 
 

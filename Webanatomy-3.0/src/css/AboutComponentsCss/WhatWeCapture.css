@@ -1,0 +1,58 @@
+/* ======================================================
+   WhatWeCapture.css
+   ====================================================== */
+
+.wwc-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 0 0 100px 0;
+  /* no horizontal padding — cards bleed edge-to-edge */
+  cursor: grab;
+  user-select: none;
+}
+
+.wwc-section.is-dragging {
+  cursor: grabbing;
+}
+
+/* ── Infinite track ── */
+.wwc-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  will-change: transform;
+  /* wide enough to hold all duplicated cards + a bit of breathing room */
+  width: max-content;
+}
+
+/* ── Single card ── */
+.wwc-card {
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.wwc-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.6s ease;
+}
+
+.wwc-card:hover .wwc-card-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .wwc-card {
+    width: 320px;
+    height: 320px;
+  }
+}

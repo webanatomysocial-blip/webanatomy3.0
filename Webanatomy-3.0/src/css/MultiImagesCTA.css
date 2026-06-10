@@ -97,3 +97,44 @@
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
+@media (max-width: 768px) {
+  .micta-content {
+    height: 50vh;
+  }
+
+  .micta-content__title {
+    font-size: 80px !important;
+  }
+
+  .micta-content__img {
+    max-width: 250px;
+    height: 125px;
+  }
+
+  .micta-ask-section {
+    padding: 60px 20px;
+  }
+
+  .micta-ask-title {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .micta-ask-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .micta-btn {
+    width: 100%;
+    max-width: 290px;
+    height: 64px;
+  }
+
+  .micta-btn span {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,240 @@
+.who-we-are-section {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 120px 0;
+  width: 100%;
+}
+
+.who-we-are-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header styling */
+.who-we-are-header {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.who-we-are-subtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: start;
+  padding-top: 10px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle-star {
+  font-size: 14px;
+}
+
+.who-we-are-content-right {
+  display: flex;
+  flex-direction: column;
+  max-width: 820px;
+}
+
+.who-we-are-title {
+  font-size: 82px;
+  font-weight: 300;
+  line-height: 1.05;
+  color: #000000;
+  letter-spacing: -0.02em;
+  margin-bottom: 35px;
+}
+
+.who-we-are-desc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #555555;
+  margin-bottom: 40px;
+}
+
+.who-we-are-btn-wrapper {
+  align-self: start;
+}
+
+/* Stats section styling */
+.who-we-are-stats-container {
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+
+.who-we-are-curve-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.curve-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.who-we-are-stats-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  z-index: 2;
+}
+
+.who-we-are-stat-col {
+  position: relative;
+  height: 100%;
+}
+
+/* Timeline Vertical Line */
+.stat-vertical-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* Extends all the way to the bottom */
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Yellow Circle Node */
+.stat-circle {
+  position: absolute;
+  left: -6px;
+  /* Center circle on 1px line */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #FFDD00;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 2px #ffffff;
+  /* Visual mask for background path */
+}
+
+/* Content block positioning */
+.stat-content-block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 120px;
+  /* Fixed height to align all stat blocks at the bottom */
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.stat-number {
+  font-size: 50px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.stat-counter-value {
+  display: inline-block;
+}
+
+.stat-label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #777777;
+  margin-top: 8px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+  .who-we-are-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .who-we-are-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-are-section {
+    padding: 80px 0;
+  }
+
+  .who-we-are-container {
+    padding: 0 24px;
+  }
+
+  .who-we-are-title {
+    font-size: 32px;
+  }
+
+  .who-we-are-desc {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* Degrade Stats Grid into a Vertical Timeline */
+  .who-we-are-stats-container {
+    height: auto;
+  }
+
+  .who-we-are-curve-overlay {
+    display: none;
+    /* Hide horizontal curves on vertical stacks */
+  }
+
+  .who-we-are-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .who-we-are-stat-col {
+    height: auto;
+  }
+
+  .stat-vertical-line {
+    top: 0 !important;
+    bottom: -40px;
+    /* Connect to next item */
+  }
+
+  /* Hide vertical line on the last column in vertical stacking mode */
+  .who-we-are-stat-col:last-child .stat-vertical-line {
+    display: none;
+  }
+
+  .stat-circle {
+    top: 10px !important;
+  }
+
+  .stat-content-block {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    height: auto;
+    margin-top: 0 !important;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .stat-number {
+    font-size: 54px;
+  }
+}

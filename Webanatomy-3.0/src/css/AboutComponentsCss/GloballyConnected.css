@@ -1,0 +1,175 @@
+/* ======================================================
+   GloballyConnected.css
+   ====================================================== */
+
+.gcon-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 100px 75px 100px 75px;
+  box-sizing: border-box;
+}
+
+.gcon-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ── Header row ── */
+.gcon-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.gcon-title {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #000000;
+}
+
+.gcon-tag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+
+/* ── World Map Container ── */
+.gcon-map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  overflow: hidden;
+  /* crops out margins */
+}
+
+.gcon-map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: opacity(0.8);
+}
+
+/* ── Pins ── */
+.gcon-pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Anchor to bottom tip of the pin pointer */
+  transform: translate(-50%, -100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.3s ease;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.gcon-pin:hover {
+  transform: translate(-50%, -103%) scale(1.06);
+  z-index: 12;
+}
+
+.gcon-pin-label {
+  background-color: #ffdd00;
+  /* Yellow box background */
+  color: #000000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  margin-left: 70px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.gcon-pin-icon {
+  width: 16px;
+  height: 20px;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.gcon-pin:hover .gcon-pin-icon {
+  transform: scale(1.05);
+}
+
+/* ── Description ── */
+.gcon-desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555555;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 650px;
+  letter-spacing: -0.01em;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 1024px) {
+  .gcon-section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gcon-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .gcon-title {
+    font-size: 44px;
+  }
+
+  .gcon-map-wrapper {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    margin: 0 auto 30px auto;
+  }
+
+  .gcon-map-image {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gcon-pin-label {
+    font-size: 8px;
+    padding: 3px 6px;
+    margin-left: 22px;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .gcon-pin-icon {
+    width: 12px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gcon-section {
+    padding: 60px 20px;
+  }
+
+  .gcon-title {
+    font-size: 32px;
+  }
+
+  .gcon-desc {
+    font-size: 14px;
+  }
+}

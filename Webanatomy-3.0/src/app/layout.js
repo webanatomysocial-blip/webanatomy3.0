@@ -2,6 +2,10 @@
 
 import localFont from "next/font/local";
 import LenisProvider from "@/components/LenisProvider";
+import "@/app/globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 
 const inter = localFont({
   src: "../assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf",
@@ -15,7 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable}>
       <body className={inter.className}>
         <LenisProvider>
+          <Header />
           {children}
+          <Footer />
         </LenisProvider>
       </body>
     </html>

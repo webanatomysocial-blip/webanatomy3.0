@@ -10,7 +10,6 @@ import MultiImagesCTA from "@/components/MultiImagesCTA";
 import { worksMetadata } from "@/works/metadata";
 import { PiSparkleFill } from "react-icons/pi";
 import "@/css/CaseStudiesSection.css";
-import "@/app/globals.css";
 
 export default function Home() {
   // Reverse the array to get descending order and take only the first 4

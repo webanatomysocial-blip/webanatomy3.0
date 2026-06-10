@@ -115,3 +115,21 @@
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
+
+@media (max-width: 600px) {
+  .csc-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 1rem 0;
+  }
+
+  .csc-name {
+    font-size: 18px;
+  }
+
+  .csc-meta {
+    font-size: 14px;
+    white-space: normal;
+  }
+}
