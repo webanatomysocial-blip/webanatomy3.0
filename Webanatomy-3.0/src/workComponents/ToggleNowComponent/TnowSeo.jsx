@@ -2,6 +2,7 @@ import React from "react";
 import "../../workCss/ToggleNowCss/TnowSeo.css";
 
 const TnowSeo = ({ tittle, para, src }) => {
+  const imageSrc = src && typeof src === "object" ? src.src : src;
   return (
     <section className="tnow-seo-section">
       <div className="tnow-seo-content">
@@ -9,7 +10,7 @@ const TnowSeo = ({ tittle, para, src }) => {
         <p className="para-text">{para}</p>
       </div>
       <div className="tnow-seo-image-container">
-        <img src={src} alt={tittle} className="tnow-seo-image" />
+        <img src={imageSrc} alt={tittle} className="tnow-seo-image" />
       </div>
     </section>
   );

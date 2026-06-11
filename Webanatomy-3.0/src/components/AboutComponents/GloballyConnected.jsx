@@ -19,8 +19,8 @@ export default function GloballyConnected() {
         
         {/* Section Header */}
         <div className="gcon-header">
-          <h2 className="head-text gcon-title">We're globally connected</h2>
-          <span className="gcon-tag">✦ Our Journey</span>
+          <h2 className="head-text gcon-title"> We Work Without Borders</h2>
+          <span className="gcon-tag">✦ Our Reach</span>
         </div>
 
         {/* World Map Wrapper */}
@@ -55,8 +55,7 @@ export default function GloballyConnected() {
 
         {/* Section Bottom Description */}
         <p className="gcon-desc">
-          We're available across multiple locations worldwide, Delivering creativity<br />
-          without borders, Connected Globally. Designed Universally.
+          We’re available across multiple locations worldwide, Delivering creativity without borders, Connected Globally. Designed Universally.
         </p>
 
       </div>

@@ -9,7 +9,7 @@ export default function AboutPage() {
         <>
            <ServiceBanner/>
            <ServiceAccordionList/>
-            <ClientsRecognition scrollOverlayColor="#f5f5f3" />
+            <ClientsRecognition scrollOverlayColor="#f5f5f3" tag="✦ Clients" title="Businesses That Trust WebAnatomy to Get It Right." />
            <GloballyConnected />
             <MultiImagesCTA />
         </>

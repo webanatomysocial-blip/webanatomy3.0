@@ -28,13 +28,15 @@ export default function ImageExpand({ src, alt = "Expandable Image" }) {
     { scope: containerRef },
   );
 
+  const imageSrc = src && typeof src === "object" ? src.src : src;
+
   return (
     <div className="expand-container" ref={containerRef}>
       <img
         ref={imageRef}
         className="resizable-image"
         src={
-          src ||
+          imageSrc ||
           "https://wa.ctsi.in/wp-content/uploads/2025/04/image-1-scaled.png"
         }
         alt={alt}

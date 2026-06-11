@@ -11,8 +11,10 @@ export default function CompetitivePros() {
         {/* Section Header */}
         <div className="cpros-header">
           <h2 className="head-text cpros-title">
-            Competitive pros<br />
-            just for a start.
+            Competitive Pros,<br />
+            Just for a Start
+            
+
           </h2>
           <span className="cpros-tag">✦ Key milestones</span>
         </div>
@@ -29,10 +31,10 @@ export default function CompetitivePros() {
                 <line x1="7" y1="19" x2="17" y2="19" />
               </svg>
             </div>
-            <h3 className="cpros-card-title">Making A Difference</h3>
+            <h3 className="cpros-card-title">Grow With Us</h3>
             <p className="cpros-card-desc">
-              We believe in giving back and making a positive impact. As part of the Butterfly team, 
-              you'll have opportunities to engage in community projects, sustainability initiatives.
+              Every project at WebAnatomy is an opportunity to push what you know further. You will work across disciplines, industries and global clients, building a body of work that grows with you.
+
             </p>
           </div>
 
@@ -44,10 +46,10 @@ export default function CompetitivePros() {
                 <polyline points="17 18 12 13 7 18" />
               </svg>
             </div>
-            <h3 className="cpros-card-title">Grow With Us</h3>
+            <h3 className="cpros-card-title">A Culture Worth Being Part Of</h3>
             <p className="cpros-card-desc">
-              Professional growth is a cornerstone of life at Butterfly. We provide continuous learning 
-              opportunities, mentorship programs, and the chance to work on diverse.
+            Ask anyone on our team what they love most about working here, and the answer is always the same, the people. We brainstorm together, challenge each other and build something we are genuinely proud of every single day.
+
             </p>
           </div>
 
@@ -64,8 +66,8 @@ export default function CompetitivePros() {
             </div>
             <h3 className="cpros-card-title">Your Well-Being Matters</h3>
             <p className="cpros-card-desc">
-              We offer a benefits package designed with your well-being in mind. Enjoy competitive salaries, 
-              health coverage, retirement plans, and work-life balance initiatives.
+              Competitive compensation, a collaborative environment and work that actually excites you. We take care of our people because great work only comes from people who feel valued.
+
             </p>
           </div>
 

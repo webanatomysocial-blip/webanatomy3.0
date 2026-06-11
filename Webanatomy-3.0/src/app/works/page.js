@@ -17,12 +17,13 @@ export default function WorksPage() {
       <Banner
         title={
           <>
-            Explore Our
-            <br />
-            Latest Works
+            Works We Are <br />Proud of
+
+            
+           
           </>
         }
-        desc="We craft high-performing websites, custom digital systems, and memorable brand identity designs to help businesses grow with confidence."
+        desc="Over 100 projects across India, the UK and Europe. Each one was built with the same level of thinking, care and craft."
         image={bannerImg}
         buttons={[
           { text: "Book a Free Call" }
@@ -52,7 +53,7 @@ export default function WorksPage() {
           ))}
         </div>
       </section>
-  <GloballyConnected/>
+      <GloballyConnected/>
       <MultiImagesCTA />
     </>
   );

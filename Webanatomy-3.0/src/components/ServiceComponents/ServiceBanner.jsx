@@ -9,18 +9,16 @@ export default function ServiceBanner() {
     <Banner
       title={
         <>
-          We Build Digital
+          The Expertise to Build It.
           <br />
-          Experiences That
-          <br />
-          Move Brands Forward
+          The Experience to Build It Right.
         </>
       }
-      desc="At Web Anatomy, we blend creativity, strategy, and technology to craft modern digital experiences that help businesses grow, connect, and stand out in the digital world."
+      desc="At WebAnatomy, we have spent years building products, designing experiences and growing businesses for clients who expect the best — and we have never once lowered that standard."
       image={bannerImg}
       buttons={[
-        { text: "Explore Our Works" },
-        { text: "Book a Free Call" }
+        { text: "Explore Our Work →" },
+        { text: "Book a Call" }
       ]}
     />
   );

@@ -7,12 +7,12 @@ import bannerImg from "@/assets/images/about/banner.avif";
 export default function CareersBanner() {
   return (
     <Banner
-      title="Spread your wings with us"
-      desc="We’re looking for thoughtful builders who want to create better tools for modern sales teams."
+      title="Build the Kind of Work You Are Proud to Put Your Name On"
+      desc=" The work is only as good as the team behind it. Come be part of ours."
       image={bannerImg}
       buttons={[
-        { text: "Explore Our Works" },
-        { text: "Book a Free Call" }
+        { text: "View Open Roles " },
+       
       ]}
     />
   );

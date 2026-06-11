@@ -4,17 +4,17 @@ import { useWorkPopup } from "../context/WorkPopupContext";
 import { BsArrowRight } from "react-icons/bs";
 import "../workCss/WorkPopup.css";
 
-// Automatically import all popup content components
-// They should be named exactly like the project slug (e.g., health-connect.jsx)
-const contentModules = import.meta.glob("../works/workPopupContent/*.jsx", {
-  eager: true,
-  import: "default",
-});
+const requireContext = require.context(
+  "../works/workPopupContent",
+  false,
+  /\.jsx$/
+);
 
 const CONTENT_MAP = {};
-Object.entries(contentModules).forEach(([path, module]) => {
-  const name = path.split("/").pop().replace(".jsx", "");
-  CONTENT_MAP[name] = module;
+requireContext.keys().forEach((key) => {
+  const name = key.split("/").pop().replace(".jsx", "");
+  const module = requireContext(key);
+  CONTENT_MAP[name] = module.default || module;
 });
 
 const WorkPopup = () => {

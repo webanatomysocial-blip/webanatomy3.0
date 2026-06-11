@@ -3,10 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "../../workCss/threatsenseaicss/threatsenseaiStickyImages.css";
-import mainvideo from "../../workVideos/threatsenseai/main.mp4";
-import frontvideo from "../../workVideos/threatsenseai/bigmiddle.mp4";
-import leftvideo from "../../workVideos/threatsenseai/left.mp4";
-import rightvideo from "../../workVideos/threatsenseai/right.mp4";
+const mainvideo = "/videos/work/threatsenseai/main.mp4";
+const frontvideo = "/videos/work/threatsenseai/bigmiddle.mp4";
+const leftvideo = "/videos/work/threatsenseai/left.mp4";
+const rightvideo = "/videos/work/threatsenseai/right.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 

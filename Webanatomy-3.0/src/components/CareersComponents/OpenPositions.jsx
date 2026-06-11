@@ -6,39 +6,45 @@ import "@/css/CareersComponentsCss/OpenPositions.css";
 const JOBS = [
   {
     id: 1,
-    title: "Graphic Designer",
-    tags: ["Remote", "Full-time"],
-    desc: "Design intuitive experiences for sales teams and shape the future of CloseCRM."
+    title: "SEO Executive",
+    tags: ["On-site · Hyderabad", "Full-time · 6 months – 1 year"],
+    desc: "Drive organic growth for WebAnatomy and our clients through smart keyword strategy, on-page optimisation and measurable performance."
   },
   {
     id: 2,
-    title: "UI/UX Designer",
-    tags: ["On-site", "On-site"],
-    desc: "Build fast, scalable interfaces that power the modern CRM experience"
+    title: "Video Editor",
+    tags: ["On-site · Hyderabad", "Full-time · 2 Positions"],
+    desc: "Craft video content that tells brand stories with precision, pace and visual impact across digital platforms."
   },
   {
     id: 3,
-    title: "Digital Marketer",
-    tags: ["On-site", "Contract"],
-    desc: "Lead product initiatives and help define the direction of CloseCRM."
+    title: "Sales Executive",
+    tags: ["On-site · Hyderabad", "Full-time · Fresher"],
+    desc: "Connect with businesses across India and beyond, understand their digital goals and help them discover what WebAnatomy can build for them."
   },
   {
     id: 4,
-    title: "UX Researcher",
-    tags: ["Hybrid", "Part-time"],
-    desc: "Conduct user interviews and usability tests to enhance the user journey across our platform."
+    title: "Account Manager",
+    tags: ["On-site · Hyderabad", "Full-time · 0–1 Year"],
+    desc: "Be the bridge between our clients and our team — managing relationships, timelines and expectations with clarity and confidence."
   },
   {
     id: 5,
-    title: "Sales",
-    tags: ["Remote", "Full-time"],
-    desc: "Analyze user data to inform design decisions and improve product functionalities."
+    title: "Content Creator",
+    tags: ["On-site · Hyderabad", "Full-time · 0–1 Year"],
+    desc: "Write and create content that is sharp, purposeful and built for the right audience — across social media, campaigns and brand communication."
   },
   {
     id: 6,
-    title: "Mobile App Developer",
-    tags: ["On-site", "Full-time"],
-    desc: "Develop and execute marketing strategies to promote CloseCRM effectively."
+    title: "Social Media Manager",
+    tags: ["On-site · Hyderabad", "Full-time · 0–1 Year"],
+    desc: "Own WebAnatomy's social presence — creating content that reflects the quality of our work and builds a community around the brand."
+  },
+  {
+    id: 7,
+    title: "Founder's Office",
+    tags: ["On-site · Hyderabad", "Full-time · 0–6 Months"],
+    desc: "Work directly alongside the founders across strategy, operations and growth initiatives. For someone who wants to understand how a premium agency is built — from the inside."
   }
 ];
 
@@ -52,11 +58,12 @@ export default function OpenPositions() {
           <div className="openpos-header-left">
             <h2 className="head-text openpos-title">Open Positions</h2>
             <p className="openpos-subtitle">
-              We're looking for thoughtful builders who want to create better tools for modern sales teams.
+              Seven roles. One team. Find where you fit.
+
             </p>
           </div>
           <div className="openpos-header-right">
-            <span className="openpos-badge">6 Open Roles</span>
+            <span className="openpos-badge">7 Open Roles</span>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import '../css/CaseStudyCard.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { FiArrowUpRight } from 'react-icons/fi';
 
@@ -16,12 +17,18 @@ export default function CaseStudyCard({ study }) {
     imageAlt: 'Placeholder Image',
   };
 
+  const hasId = safeStudy.id !== undefined && safeStudy.id !== null;
+  const CardWrapper = hasId ? Link : 'article';
+  const wrapperProps = hasId ? { href: `/work?id=${safeStudy.id}` } : {};
+
   return (
-    <article
+    <CardWrapper
       className="csc-card"
+      {...wrapperProps}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       aria-label={`Case study: ${safeStudy.title}`}
+      style={{ textDecoration: 'none' }}
     >
       {/* Image with blur overlay */}
       <div className="csc-image-wrap">
@@ -55,6 +62,6 @@ export default function CaseStudyCard({ study }) {
         <h3 className="csc-name">{safeStudy.title}</h3>
         <span className="csc-meta">{safeStudy.subtitle}</span>
       </div>
-    </article>
+    </CardWrapper>
   );
 }

@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bannerImg from "@/assets/images/about/banner.avif";
 import ScrollOverlay from "../HomeComponents/ScrollOverlay";
 
-export default function ClientsRecognition({ scrollOverlayColor = "white" }) {
+export default function ClientsRecognition({ scrollOverlayColor = "white", title, tag }) {
   const sectionRef = useRef(null);
   const floatingImgRef = useRef(null);
 
@@ -91,10 +91,14 @@ export default function ClientsRecognition({ scrollOverlayColor = "white" }) {
       <div className="cr-container">
         {/* Left column: Header text */}
         <div className="cr-left">
-          <div className="cr-tag">✦ Clients & Recognition</div>
+          <div className="cr-tag">{tag || "✦ Clients & Recognition"}</div>
           <h2 className="cr-title">
-            Trusted By Clients,<br />
-            Recognized For Leads.
+            {title || (
+              <>
+                Trusted By Clients,<br />
+                Recognized For Leads.
+              </>
+            )}
           </h2>
         </div>
 

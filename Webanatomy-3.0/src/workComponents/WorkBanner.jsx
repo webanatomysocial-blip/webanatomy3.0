@@ -7,12 +7,13 @@ export default function WorkBanner({
   title2,
   category2,
 }) {
+  const imageSrc = src && typeof src === "object" ? src.src : src;
   return (
     <>
       <div
         className="work-banner"
         style={{
-          backgroundImage: `url(${src || ""})`,
+          backgroundImage: `url(${imageSrc || ""})`,
         }}
       >
         <div className="work-contents">

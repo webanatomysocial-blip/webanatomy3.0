@@ -4,6 +4,10 @@ import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import DynamicWork from '@/components/DynamicWork';
 import { worksMetadata } from '@/works/metadata';
+import ToggleNow from '@/works/ToggleNow';
+import ThreatSenseAI from '@/works/threatsenseai';
+import TheSase from '@/works/TheSase';
+import PiedPippers from '@/works/piedpippers';
 
 function WorkContent() {
   const searchParams = useSearchParams();
@@ -14,10 +18,29 @@ function WorkContent() {
   }
 
   // Find the work item by id (converting both to string to be safe)
-  const work = worksMetadata.find((w) => w.id?.toString() === id || w.slug === id);
+  const work = worksMetadata.find(
+    (w) =>
+      w.id?.toString().toLowerCase() === id.toLowerCase() ||
+      w.slug?.toLowerCase() === id.toLowerCase()
+  );
 
   if (!work) {
     return <div style={{ color: 'white', padding: '100px', textAlign: 'center' }}>Work case study not found.</div>;
+  }
+
+  const workIdLower = work.id?.toString().toLowerCase();
+
+  if (workIdLower === 'togglenow') {
+    return <ToggleNow />;
+  }
+  if (workIdLower === 'threatsenseai') {
+    return <ThreatSenseAI />;
+  }
+  if (workIdLower === 'thesase') {
+    return <TheSase />;
+  }
+  if (workIdLower === 'piedpippers') {
+    return <PiedPippers />;
   }
 
   return (
@@ -32,8 +55,10 @@ function WorkContent() {
 
 export default function WorkPage() {
   return (
-    <Suspense fallback={<div style={{ color: 'white', padding: '100px', textAlign: 'center' }}>Loading work case study...</div>}>
-      <WorkContent />
-    </Suspense>
+    <div style={{ color: "#000000", backgroundColor: "#ffffff", minHeight: "100vh" }}>
+      <Suspense fallback={<div style={{ color: 'white', padding: '100px', textAlign: 'center' }}>Loading work case study...</div>}>
+        <WorkContent />
+      </Suspense>
+    </div>
   );
 }

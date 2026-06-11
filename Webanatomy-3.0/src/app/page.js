@@ -36,7 +36,8 @@ export default function Home() {
                 title: work.title,
                 subtitle: work.category,
                 image: work.image,
-                imageAlt: work.title
+                imageAlt: work.title,
+                id: work.id
               }} 
             />
           ))}

@@ -22,8 +22,12 @@ const ServiceCategoryRow = ({ category, index }) => {
       {/* Media Column */}
       <div className="service-media-col">
         <div className="service-header-left">
-         
           <h2 className="head-text">{category.categoryTitle}</h2>
+          {category.categoryDesc && (
+            <p className="service-category-desc" style={{ marginTop: "16px", fontSize: "16px", color: "#555", lineHeight: "1.6", fontWeight: "300" }}>
+              {category.categoryDesc}
+            </p>
+          )}
         </div>
         
         {/* Rounded browser mockup container */}
@@ -94,154 +98,126 @@ const ServiceCategoryRow = ({ category, index }) => {
 export default function ServiceAccordionList() {
   const serviceCategories = [
     {
+      categoryTitle: "Product Engineering",
+      categoryDesc: "We place engineering at the heart of everything we build. Whether it is a SaaS platform, a mobile application or a custom software solution, our teams bring the technical depth and product thinking to deliver something that works — reliably, scalably and exactly as intended.",
+      videoSrc: "/videos/services-page/Teachnology - Website.mp4",
+      items: [
+        {
+          title: "Web Development",
+          description: "Performant, scalable web applications built on modern frameworks with the architecture to grow alongside your business."
+        },
+        {
+          title: "Mobile App Development",
+          description: "Native and cross-platform mobile applications built around how your users actually behave — on Android and iOS alike."
+        },
+        {
+          title: "SaaS Product Development",
+          description: "End-to-end SaaS platforms engineered for scale, with the foundation to support your product as your user base grows."
+        },
+        {
+          title: "Custom Software Development",
+          description: "Bespoke software built around the specific operational demands of your business — not adapted from a generic template."
+        },
+        {
+          title: "API Development & Integration",
+          description: "Robust APIs and third-party integrations that connect your systems and keep your product ecosystem running without friction."
+        },
+        {
+          title: "E-commerce Development",
+          description: "Commerce platforms built for conversion — fast, intuitive and engineered to handle the demands of modern online retail."
+        }
+      ]
+    },
+    {
       categoryTitle: "Experience Design",
+      categoryDesc: "Design is not decoration. It is the difference between a product people use and a product people love. Our experience design practice begins with a deep understanding of your users — their needs, their behaviour and their expectations — and builds from that foundation to create digital experiences that feel effortless.",
       videoSrc: "/videos/services-page/Experience-Design.mp4",
       items: [
         {
           title: "UI/UX Design",
-          description: "We create clean, intuitive user interfaces and experiences tailored to your audience. From user research and wireframing to high-fidelity designs, we ensure every interaction is meaningful and seamless."
+          description: "User interfaces designed around research, tested against real behaviour and refined until they genuinely perform."
         },
         {
           title: "Website Design",
-          description: "Stunning, responsive, and performance-optimized websites built to capture attention. We design visually striking layouts that communicate your brand values and engage visitors."
+          description: "Websites that communicate the right things to the right people — designed to earn trust and drive action from the very first visit."
         },
         {
-          title: "Mobile Experience",
-          description: "Mobile-first design strategies that deliver cohesive brand experiences on smartphones and tablets. We optimize workflows and touch targets for mobile interfaces."
+          title: "Mobile Experience Design",
+          description: "Mobile experiences that feel native to the device and natural to the user — across every screen size and interaction."
         },
         {
           title: "Commerce Experience",
-          description: "Designing seamless, friction-free e-commerce paths that boost conversion and drive sales. We optimize shopping carts, product displays, and checkout experiences."
+          description: "Shopping experiences designed to reduce friction and increase conversion — from first browse to completed purchase."
         },
         {
           title: "Prototyping & User Testing",
-          description: "Interactive prototypes to validate design concepts with real users. We gather critical feedback, iterate rapidly, and eliminate usability hurdles before engineering."
-        },
-        {
-          title: "Accessibility & Inclusive Design",
-          description: "Designing websites and digital platforms that are usable by everyone. We follow WCAG compliance standards to ensure accessibility across diverse needs."
-        },
-        {
-          title: "AR/VR Experience Design",
-          description: "Crafting immersive spatial experiences for augmented and virtual reality. We design interfaces for 3D environments that feel intuitive and responsive."
+          description: "Ideas validated before they are built — through high-fidelity prototypes and real user feedback that shapes every design decision."
         },
         {
           title: "Design Systems & Component Libraries",
-          description: "Standardized design languages with reusable UI elements. We build design systems that streamline development, align teams, and maintain consistency."
+          description: "Scalable design systems that give your product team the consistency and speed to build confidently across every touchpoint."
         }
       ]
     },
     {
-      categoryTitle: "Technology & Engineering",
-      videoSrc: "/videos/services-page/Teachnology - Website.mp4",
-      items: [
-        {
-          title: "Frontend Development",
-          description: "We implement modern, pixel-perfect frontend experiences using clean React and Javascript, optimized for speed and fluidity."
-        },
-        {
-          title: "Backend Systems",
-          description: "Scalable, secure, and robust server architecture. We design resilient databases, secure APIs, and server logic tailored to handle heavy traffic."
-        },
-        {
-          title: "Mobile App Development",
-          description: "Cross-platform and native mobile applications that offer native-level performance and smooth, animated interactions."
-        },
-        {
-          title: "Next.js & React Apps",
-          description: "Production-ready web apps leverage server-side rendering (SSR) and static site generation (SSG) for elite SEO performance and fast load times."
-        },
-        {
-          title: "E-commerce Platforms",
-          description: "Custom storefronts and Shopify/WooCommerce integrations built with robust inventory systems, secure payment getaways, and smooth checkouts."
-        },
-        {
-          title: "Headless CMS Integration",
-          description: "Content management solutions powered by headless systems like Sanity, Strapi, or Contentful, separating content administration from visual presentation."
-        },
-        {
-          title: "API Development & Integrations",
-          description: "Designing clean RESTful or GraphQL APIs that connect services and third-party tools seamlessly to power your application flow."
-        },
-        {
-          title: "DevOps & Cloud Setup",
-          description: "Optimized deployment pipelines and cloud infrastructure on AWS, Vercel, or GCP with automated CI/CD and secure domain/SSL setup."
-        }
-      ]
-    },
-    {
-      categoryTitle: "Brand & Creative",
+      categoryTitle: "Brand & Identity",
+      categoryDesc: "A brand is the first impression your business makes — before a product is used, before a meeting is held, before a word is spoken. We build brand identities that are grounded in strategy and distinctive in their execution, designed to hold their own in any room and scale across every medium.",
       videoSrc: "/videos/services-page/Branding - Website.mp4",
       items: [
         {
-          title: "Brand Identity",
-          description: "Developing memorable visual assets including logo families, custom iconography, and visual marks that establish a distinctive presence."
+          title: "Logo Design",
+          description: "Logomarks built around the strategy of the brand — designed to be distinctive, memorable and built to last."
         },
         {
-          title: "Brand Positioning",
-          description: "Defining your unique value proposition, voice, and message hierarchy to position your business correctly within competitive landscapes."
+          title: "Visual Identity & Guidelines",
+          description: "Comprehensive identity systems that keep your brand consistent across every platform, channel and touchpoint."
         },
         {
-          title: "Logo & Visual Systems",
-          description: "Crafting beautiful, scalable logos and dynamic visual systems that convey identity across digital and physical touchpoints."
+          title: "Brand Strategy & Positioning",
+          description: "Clarity on who you are, who you are for and why it matters — the strategic foundation every brand decision is built on."
         },
         {
-          title: "Brand Guidelines",
-          description: "Comprehensive rulebooks governing typography, color usage, image styles, and layouts to ensure complete brand consistency."
+          title: "Motion Branding & Video Identity",
+          description: "Brand identities brought to life through motion — for digital platforms, product interfaces and video content."
         },
         {
-          title: "Typography & Design",
-          description: "Selecting and pairing typefaces that define character and establish a clear hierarchy, accompanied by bespoke layouts."
+          title: "Rebranding & Brand Refresh",
+          description: "When a brand has outgrown its identity, we rebuild it — honouring what has been established while positioning the business for where it is going."
         },
         {
-          title: "Packaging & Print",
-          description: "Tactile, premium packaging and print collateral designed to wow customers at first touch and leave a lasting impression."
-        },
-        {
-          title: "Graphic Illustration",
-          description: "Bespoke illustrations and graphic assets tailored to your brand style to communicate concepts elegantly and uniquely."
-        },
-        {
-          title: "Motion Identity",
-          description: "Creating micro-interactions, logo animations, and transition assets that bring your digital interface to life."
+          title: "Graphic Design",
+          description: "Design across print and digital — from campaign visuals to corporate collateral — executed at the standard your brand deserves."
         }
       ]
     },
     {
       categoryTitle: "Digital Marketing",
+      categoryDesc: "Building a great product is only half the equation. Getting the right people to find it, understand it and choose it is the other half. Our digital marketing practice is built around measurable performance — every channel, every campaign and every piece of content is held accountable to what it delivers for your business.",
       videoSrc: "/videos/services-page/Digital-Marketing.mp4",
       items: [
         {
-          title: "SEO Optimization",
-          description: "Comprehensive on-page and off-page optimization to improve search engine rankings, drive organic traffic, and build authority."
-        },
-        {
-          title: "Social Media Marketing",
-          description: "Targeted campaigns and organic content strategies across Instagram, LinkedIn, and YouTube to build active online communities."
-        },
-        {
-          title: "PPC & Google Ads",
-          description: "High-yielding paid search and display advertisements focused on keywords that attract ready-to-buy customers."
-        },
-        {
-          title: "Content Strategy",
-          description: "Designing a comprehensive roadmap for blog articles, newsletters, and case studies that capture authority and educate audiences."
+          title: "Search Engine Optimisation",
+          description: "Organic visibility built on keyword strategy, technical SEO and content that earns rankings — and holds them over time."
         },
         {
           title: "Performance Marketing",
-          description: "Data-driven advertising campaigns that leverage pixel tracking and custom audiences to optimize advertising spend return."
+          description: "Paid campaigns across search and social, optimised continuously for the metrics that matter most to your business."
         },
         {
-          title: "Copywriting",
-          description: "Persuasive and crisp copy tailored for website homepages, landing pages, and email sequences that motivates user action."
+          title: "Social Media Management",
+          description: "Social presence managed with consistency and strategic intent — building an audience that engages and a brand that is recognised."
         },
         {
-          title: "Marketing Analytics",
-          description: "Clear dashboard integrations with Google Analytics and Mixpanel to measure growth trends, user behavior, and campaigns."
+          title: "Content Marketing",
+          description: "Content that earns attention, builds authority and moves the right audience through the funnel at every stage of their journey."
         },
         {
-          title: "CRO Audits",
-          description: "Analyzing user sessions and heatmaps to discover conversion friction points, improving key user flow pathways."
+          title: "Pay-Per-Click Advertising",
+          description: "PPC campaigns built for efficiency — precise targeting, rigorous testing and continuous optimisation on every rupee spent."
+        },
+        {
+          title: "Marketing Automation",
+          description: "Systems that keep your marketing working around the clock — nurturing leads, personalising journeys and converting at scale."
         }
       ]
     }

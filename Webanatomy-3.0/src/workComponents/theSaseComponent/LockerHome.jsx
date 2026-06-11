@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import "../../workCss/theSaseCss/LockerHome.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,18 +18,21 @@ function LockerHome() {
   // const aboutUsSectionRef = useRef(null);
   const homeoverlay = useRef(null);
 
-  // Generate image path
-  const imageModules = import.meta.glob(
-    "../../WorkImages/Thesase/Squence-images/locker_01_*.webp",
-    { eager: true },
+  // Generate image path using Webpack require.context
+  const requireContext = require.context(
+    "../../WorkImages/Thesase/Squence-images",
+    false,
+    /locker_01_\d{4}\.webp$/
   );
+
   const getFramePath = (frame) => {
     const paddedFrame = String(frame).padStart(4, "0");
-    const module =
-      imageModules[
-        `../../WorkImages/Thesase/Squence-images/locker_01_${paddedFrame}.webp`
-      ];
-    return module ? module.default : "";
+    try {
+      const module = requireContext(`./locker_01_${paddedFrame}.webp`);
+      return module ? module.default || module : "";
+    } catch (e) {
+      return "";
+    }
   };
 
   // Preload images
