@@ -17,12 +17,13 @@ const inter = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <LenisProvider>
           <Header />
           {children}
           <Footer />
         </LenisProvider>
+        <div className="bottom-blur-container"></div>
       </body>
     </html>
   );

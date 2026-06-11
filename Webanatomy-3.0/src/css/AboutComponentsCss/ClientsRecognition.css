@@ -37,7 +37,7 @@
   z-index: 2;
   display: grid;
   grid-template-columns: 42% 58%;
-  gap: 260px;
+  gap: 120px;
   align-items: start;
   width: 100%;
 }

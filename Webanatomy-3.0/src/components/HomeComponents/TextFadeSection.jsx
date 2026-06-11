@@ -67,25 +67,25 @@ export default function TextFadeSection() {
       <div className="counters-container" ref={countersRef}>
         <div className="counter-item">
           <div className="counter-number">
-            <span className="counter-val" data-target="60">0</span>+
+            <span className="counter-val" data-target="60" dangerouslySetInnerHTML={{ __html: "0" }}></span>+
           </div>
           <p className="counter-label">Global Clients</p>
         </div>
         <div className="counter-item">
           <div className="counter-number">
-            <span className="counter-val" data-target="30">0</span>%
-          </div>
+            <span className="counter-val" data-target="30" dangerouslySetInnerHTML={{ __html: "0" }}></span>%
+          </div>  
           <p className="counter-label">Higher Conversion</p>
         </div>
         <div className="counter-item">
           <div className="counter-number">
-            <span className="counter-val" data-target="80">0</span>+
+            <span className="counter-val" data-target="80" dangerouslySetInnerHTML={{ __html: "0" }}></span>+
           </div>
           <p className="counter-label">Projects Completed</p>
         </div>
         <div className="counter-item">
           <div className="counter-number">
-            <span className="counter-val" data-target="3">0</span>x
+            <span className="counter-val" data-target="3" dangerouslySetInnerHTML={{ __html: "0" }}></span>x
           </div>
           <p className="counter-label">Reduction in work</p>
         </div>

@@ -5,26 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiPlus, FiX } from 'react-icons/fi';
 import '@/css/ServiceComponentsCss/ServiceAccordionList.css';
 
-// Import dummy images from Services folder
-import s1 from '@/assets/images/Services/service-1.webp';
-import s2 from '@/assets/images/Services/service-2.webp';
-import s3 from '@/assets/images/Services/service-3.webp';
-import s4 from '@/assets/images/Services/service-4.webp';
+
 
 // Rotating sparkle star component (Clockwise slow rotation)
-const SparkleLogo = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    className="rotating-logo"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"
-      fill="#FFE500"
-    />
-  </svg>
-);
+
 
 // Individual Service Category Row Component (manages its own active accordion state)
 const ServiceCategoryRow = ({ category, index }) => {
@@ -38,8 +22,8 @@ const ServiceCategoryRow = ({ category, index }) => {
       {/* Media Column */}
       <div className="service-media-col">
         <div className="service-header-left">
-          <SparkleLogo />
-          <h2 className="service-category-title">{category.categoryTitle}</h2>
+         
+          <h2 className="head-text">{category.categoryTitle}</h2>
         </div>
         
         {/* Rounded browser mockup container */}
@@ -51,7 +35,7 @@ const ServiceCategoryRow = ({ category, index }) => {
               Actual video src will be replaced later by the user.
             */}
             <video
-              poster={category.dummyImg.src}
+              src={category.videoSrc}
               autoPlay
               loop
               muted
@@ -111,7 +95,7 @@ export default function ServiceAccordionList() {
   const serviceCategories = [
     {
       categoryTitle: "Experience Design",
-      dummyImg: s1,
+      videoSrc: "/videos/services-page/Experience-Design.mp4",
       items: [
         {
           title: "UI/UX Design",
@@ -149,7 +133,7 @@ export default function ServiceAccordionList() {
     },
     {
       categoryTitle: "Technology & Engineering",
-      dummyImg: s2,
+      videoSrc: "/videos/services-page/Teachnology - Website.mp4",
       items: [
         {
           title: "Frontend Development",
@@ -187,7 +171,7 @@ export default function ServiceAccordionList() {
     },
     {
       categoryTitle: "Brand & Creative",
-      dummyImg: s3,
+      videoSrc: "/videos/services-page/Branding - Website.mp4",
       items: [
         {
           title: "Brand Identity",
@@ -225,7 +209,7 @@ export default function ServiceAccordionList() {
     },
     {
       categoryTitle: "Digital Marketing",
-      dummyImg: s4,
+      videoSrc: "/videos/services-page/Digital-Marketing.mp4",
       items: [
         {
           title: "SEO Optimization",

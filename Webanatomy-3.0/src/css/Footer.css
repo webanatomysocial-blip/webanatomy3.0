@@ -85,7 +85,7 @@
 
 /* ── Big Animated Text ── */
 .wa-footer-bigtext-wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@
   display: inline-flex;
   white-space: nowrap;
   font-size: clamp(80px, 15vw, 280px);
-  font-weight: 800;
+  font-weight: 500;
   text-transform: none; /* WebAnatomy uses title/camel case as per design */
   letter-spacing: -0.04em;
   line-height: 0.9;

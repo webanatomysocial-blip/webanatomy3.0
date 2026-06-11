@@ -12,7 +12,7 @@ export default function HomeBanner() {
       {/* Background Video */}
       <video
         className="home-banner-bg"
-        src="/videos/homeBanner/banner.mp4"
+        src="/videos/homeBanner/banner.mp4?v=2"
         autoPlay
         loop
         muted

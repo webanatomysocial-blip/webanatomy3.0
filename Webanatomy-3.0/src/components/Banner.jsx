@@ -27,7 +27,7 @@ export default function Banner({ title, desc, image, buttons = [] }) {
       {/* Content Overlay */}
       <div className="about-banner-content">
         <div className="about-banner-bottom-left">
-          <h1 className="big-head-text-white">{title}</h1>
+          <h1 className="head-text-white">{title}</h1>
           {desc && <p className="about-banner-desc">{desc}</p>}
         </div>
 
