@@ -1,10 +1,11 @@
 .JustHeading-section {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   background-color: var(--white-color);
   padding: 100px 350px;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {

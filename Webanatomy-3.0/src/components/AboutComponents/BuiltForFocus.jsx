@@ -67,9 +67,9 @@ export default function BuiltForFocus() {
       {/* ── Section Header ── */}
       <div className="bff-header">
         <h2 className="head-text bff-title">
-          Built for focus.
+          Where Technology Meets Imagination,
           <br />
-          Designed for clarity.
+          and Imagination Becomes Reality.
         </h2>
         <span className="bff-tag">✦ Key milestones</span>
       </div>
@@ -96,9 +96,7 @@ export default function BuiltForFocus() {
                 Your Business
               </p>
               <p className="sub-heading bff-caption-desc">
-                Web Anatomy exists at the intersection
-                <br />
-                of precision and imagination.
+                Seven years of building products, designing experiences and growing businesses — and we are still as hungry as day one.
               </p>
             </div>
           </div>

@@ -42,6 +42,19 @@
   background-color: #ccc;
 }
 
+.avatar-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.avatar-img:first-child {
+  margin-left: 0;
+}
+
 .trusted-text {
   font-family: var(--font-inter), sans-serif;
   font-size: 14px;

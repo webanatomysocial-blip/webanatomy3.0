@@ -1,0 +1,147 @@
+.what-we-do-section {
+  background-color: #fcfcfc;
+  padding: 100px 75px;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  overflow: hidden;
+}
+
+.what-we-do-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Header */
+.what-we-do-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.what-we-do-title {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  margin: 0;
+}
+
+.what-we-do-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  color: #111;
+}
+
+/* Grid Layout */
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card Styling */
+.what-we-do-card {
+
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+
+
+/* Image Container / Placeholder styling */
+.card-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.card-logo-image {
+  max-width: 80%;
+  max-height: 160px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.02));
+}
+
+.what-we-do-card:hover .card-logo-image {
+  transform: scale(1.06);
+}
+
+/* Dark Content Overlay Text Box */
+.card-text-box {
+  background: #0d0d0d;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-text-box h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.card-text-box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .what-we-do-card {
+    height: 420px;
+  }
+
+  .what-we-do-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do-section {
+    padding: 6rem 1.25rem;
+  }
+  
+  .what-we-do-card {
+    height: auto;
+    min-height: 380px;
+    gap: 1.5rem;
+  }
+  
+  .card-text-box {
+    padding: 1.25rem;
+  }
+}

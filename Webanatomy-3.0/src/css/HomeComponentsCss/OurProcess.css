@@ -57,7 +57,7 @@
 .op-card {
     position: relative ;
     width: 440px;
-    height: 440px; 
+    height: 480px; 
     background-color: var(--white);
     border-radius: 24px;
     padding: 32px;

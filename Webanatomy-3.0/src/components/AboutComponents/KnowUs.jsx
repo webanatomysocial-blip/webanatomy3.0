@@ -57,21 +57,21 @@ export default function KnowUs() {
   const stats = [
     {
       id: 1,
-      number: "20",
-      line1: "talented",
-      line2: "individuals"
+      number: "25+",
+      line1: "Talented",
+      line2: "Individuals"
     },
     {
       id: 2,
-      number: "20+",
-      line1: "projects",
-      line2: "later"
+      number: "5",
+      line1: "Cities",
+      line2: "Represented"
     },
     {
       id: 3,
       number: "∞",
-      line1: "combined",
-      line2: "experience"
+      line1: "Ideas",
+      line2: "Brainstormed"
     }
   ];
 

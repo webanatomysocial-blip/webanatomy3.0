@@ -7,31 +7,31 @@ const featuresData = [
   {
     id: 1,
     title: "Results That Matter",
-    desc: "Driving Real Impact Through Purposeful Design.",
+    desc: "Good design and solid engineering are not the finish line, they are the foundation. What matters is what happens after launch. More leads, better conversion, stronger brand recognition and a product your users keep coming back to.",
     icon: <PiDiamondFill size={40} color="#555" />
   },
   {
     id: 2,
-    title: "Cutting-Edge Design",
-    desc: "Modern, Bold Visuals That Capture Attention.",
+    title: "We Think Like Your Users",
+    desc: "Before a single screen is designed or a line of code is written, we put ourselves in the shoes of the people who will use what we build. That thinking is what separates good products from great ones.",
     icon: <PiCircleHalfFill size={40} color="#555" />
   },
   {
     id: 3,
-    title: "Strategy-Driven Approach",
-    desc: "Every Move Backed By Insight And Purpose.",
+    title: "Strategy Before Everything",
+    desc: "We question the brief before we answer it. The right solution always begins with the right understanding, and we never skip that step.",
     icon: <PiStarFourFill size={40} color="#555" />
   },
   {
     id: 4,
-    title: "Innovation At The Core",
-    desc: "Fresh Ideas That Challenge The Ordinary.",
+    title: "Built to Scale",
+    desc: "Every product we deliver is engineered with the architecture to grow. We build for where your business is going, not just where it is today.",
     icon: <PiSquaresFourFill size={40} color="#555" />
   },
   {
     id: 5,
-    title: "Effortless Teamwork",
-    desc: "Work Smoothly Together With Perfect Sync And Shared Focus.",
+    title: "True Partners",
+    desc: "We work alongside our clients the way a great co-founder would be deeply invested, consistently communicative and always thinking about what comes next.",
     icon: <PiCirclesFourFill size={40} color="#555" />
   }
 ];
@@ -44,9 +44,9 @@ const FeaturesSection = () => {
         {/* Left Side */}
         <div className="features-left">
           <div className="features-subtitle">
-            <PiSparkleFill size={14} color="#fff" style={{marginRight: "8px"}} /> Feedback
+            <PiSparkleFill size={14} color="#fff" style={{marginRight: "8px"}} /> What Sets Us Apart
           </div>
-          <h2 className="big-head-text-white" style={{margin: 0}}>Lorem Ipsum</h2>
+          <h2 className="big-head-text-white" style={{margin: 0, fontSize: "60px"}}>How We Work With You</h2>
         </div>
 
         {/* Right Side */}

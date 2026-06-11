@@ -1,0 +1,224 @@
+.integrations-section {
+  background-color: #fbfbfb;
+  color: #111111;
+  padding: 120px 75px;
+  font-family: var(--font-inter), sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.integrations-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.integrations-left {
+  flex: 1;
+  max-width: 620px;
+}
+
+.integrations-subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #cda434; /* subtle gold secondary text */
+  margin-bottom: 20px;
+}
+
+.integrations-title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 24px 0;
+}
+
+.integrations-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 32px 0;
+}
+
+/* Pull Quote styling */
+.integrations-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.quote-line {
+  width: 4px;
+  height: 48px;
+  background-color: #e5ca57;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.quote-text {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #222222;
+  margin: 0;
+}
+
+/* CTA button styling */
+.integrations-cta-wrapper {
+  display: flex;
+}
+
+.integrations-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 1px solid #111111;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.integrations-cta-btn:hover {
+  color: #cda434;
+  border-color: #cda434;
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.integrations-cta-btn:hover .cta-arrow {
+  transform: translateX(6px);
+}
+
+/* Right Side Grid of Chips */
+.integrations-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.integration-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+  z-index: 2;
+}
+
+.integration-chip-card {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.integration-chip-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  transition: all 0.3s ease;
+}
+
+.integration-chip-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects using dynamic brand colors */
+.integration-chip-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--hover-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.integration-chip-card:hover .integration-chip-icon-box {
+  background-color: var(--hover-color);
+  color: #ffffff;
+}
+
+.integration-chip-card:hover .integration-chip-name {
+  color: #111111;
+  font-weight: 400;
+}
+
+/* Background Glow Effect */
+.integrations-bg-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(229, 202, 87, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .integrations-section {
+    padding: 100px 40px;
+  }
+  .integrations-container {
+    flex-direction: column;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  .integrations-left {
+    max-width: 100%;
+  }
+  .integrations-right {
+    width: 100%;
+  }
+  .integration-chips-grid {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .integrations-section {
+    padding: 80px 20px;
+  }
+  .integrations-title {
+    font-size: 2.4rem;
+  }
+  .integration-chips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .integration-chip-card {
+    padding: 20px 12px;
+  }
+}

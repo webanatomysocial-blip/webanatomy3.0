@@ -1,0 +1,191 @@
+.testimonials-section {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 75px ;
+  font-family: 'Inter', sans-serif; /* Adjust to match main font if needed */
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1200px;  */
+  margin: 0 auto 3rem;
+}
+
+.testimonials-header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.feedback-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.feedback-btn:hover {
+  opacity: 0.7;
+}
+
+.testimonials-container {
+  display: flex;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  height: 480px; /* Adjust height based on preference */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.testimonial-card {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card:last-child {
+  border-right: none;
+}
+
+/* Expansion logic */
+.testimonial-card.active {
+  flex: 2.5; /* Takes up more space */
+}
+
+.testimonial-logo {
+  font-size: 1.25rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Specific logo styling based on the image */
+.testimonial-card:nth-child(1) .testimonial-logo {
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+.testimonial-quote-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  /* Keep it from jumping by fixing min-width roughly to expanded state */
+  min-width: 320px;
+}
+
+.testimonial-card.active .testimonial-quote-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.quote-content-inner {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.testimonial-footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: 320px; /* prevents layout shift on footer items when width shrinks */
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.company-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.company-tagline {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: right;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  white-space: nowrap;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.author-name {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.author-role {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsiveness for mobile/tablet could be added here */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    height: auto;
+    border: none;
+  }
+
+  .testimonial-card {
+    height: 100px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .testimonial-card:last-child {
+    border-bottom: none;
+  }
+
+  .testimonial-card.active {
+    height: 350px;
+    flex: auto;
+  }
+  
+  .testimonial-footer {
+    min-width: auto;
+  }
+  
+  .testimonial-quote-container {
+    min-width: auto;
+  }
+}

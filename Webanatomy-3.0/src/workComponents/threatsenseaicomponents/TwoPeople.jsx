@@ -101,10 +101,10 @@ export default function TwoPeople() {
   return (
     <div className="motham-container" ref={containerRef}>
       <div className="section-left-right">
-        <img className="img-1" src={img1Src} alt="" />
-        <img className="img-4" src={img4Src} alt="" />
-        <img className="img-2" src={img2Src} alt="" />
-        <img className="img-3" src={img3Src} alt="" />
+        <img className="img-1" src={img1Src.src} alt="" />z
+        <img className="img-4" src={img4Src.src} alt="" />
+        <img className="img-2" src={img2Src.src} alt="" />
+        <img className="img-3" src={img3Src.src} alt="" />
       </div>
       <div className="end-container"></div>
     </div>

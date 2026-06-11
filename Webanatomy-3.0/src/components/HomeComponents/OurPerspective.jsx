@@ -12,28 +12,28 @@ const perspectiveData = [
     id: "01",
     title: "Human × Machine",
     alt: "Human x Machine",
-    text: "Design is more than function. It's energy, emotion, and rhythm — translated into product form.",
+    text: "The most powerful digital products are built at the intersection of deep technology and deep human understanding. We never lose sight of either side of that equation.",
     img: img1.src
   },
   {
     id: "02",
-    title: "Vibe Coding",
-    alt: "Vibe Coding",
-    text: "Design is more than function. It's energy, emotion, and rhythm — translated into product form.",
+    title: "Design With Intent",
+    alt: "Design With Intent",
+    text: "Every element of a great digital product exists for a reason. We question every decision, remove everything unnecessary and keep only what genuinely serves the person using it.",
     img: img2.src
   },
   {
     id: "03",
     title: <>Future-First Thinking</>,
     alt: "Future-First Thinking",
-    text: "Design is more than function. It's energy, emotion, and rhythm — translated into product form.",
+    text: "We build for where your business is going, not just where it is today. Every product we deliver is architected to grow, scale and evolve alongside the ambitions of the business behind it.",
     img: img3.src
   },
   {
     id: "04",
-    title: <>Ethical Intelligence</>,
-    alt: "Ethical Intelligence",
-    text: "Design is more than function. It's energy, emotion, and rhythm — translated into product form.",
+    title: <>Ethical by Design</>,
+    alt: "Ethical by Design",
+    text: "We believe technology built with the user's best interests at its core performs better, lasts longer and earns more trust. That principle guides every decision we make.",
     img: img4.src
   }
 ];
@@ -43,11 +43,14 @@ const OurPerspective = () => {
     <section className="pers-section">
         <div className="pers-container">
           <div className="pers-header">
-            <h2 className="pers-title">Our Perspective</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '50%' }}>
+              <div className="pers-pill">
+                <span>✦</span> Highlights
+              </div>
+              <h2 className="pers-title" style={{ width: '100%' }}>Our Perspective</h2>
+            </div>
             <p className="pers-desc">
-              At Business Anatomy, we believe the future of creativity is not
-              artificial it's amplified. We fuse human intuition with
-              intelligent systems to craft experiences.
+              We fuse human intuition with intelligent systems to craft experiences that define brands and drive growth.
             </p>
           </div>
 

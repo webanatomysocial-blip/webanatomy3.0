@@ -4,6 +4,9 @@ import TextFadeSection from "@/components/HomeComponents/TextFadeSection";
 import OurProcess from "@/components/HomeComponents/OurProcess";
 import OurPerspective from "@/components/HomeComponents/OurPerspective";
 import FeaturesSection from "@/components/HomeComponents/FeaturesSection";
+import WhatWeDo from "@/components/HomeComponents/WhatWeDo";
+import IntegrationsSection from "@/components/HomeComponents/IntegrationsSection";
+import ClientTestimonials from "@/components/HomeComponents/ClientTestimonials";
 import OurServices from "@/components/OurServices";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import MultiImagesCTA from "@/components/MultiImagesCTA";
@@ -48,8 +51,12 @@ export default function Home() {
       <OurProcess />
       <OurPerspective />
       <FeaturesSection />
+      <WhatWeDo />
+      <IntegrationsSection />
+      <ClientTestimonials />
       
       <MultiImagesCTA />
     </>
   );
 }
+

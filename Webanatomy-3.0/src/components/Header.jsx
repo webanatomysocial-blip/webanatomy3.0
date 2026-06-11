@@ -141,10 +141,10 @@ export default function Header() {
                 <Link href="/works" className="menu-item-link">
                   Case Studies
                 </Link>
-                <Link href="#" className="menu-item-link">
-                  Industries
+                <Link href="/careers" className="menu-item-link">
+                  Careers
                 </Link>
-                <Link href="#" className="menu-item-link">
+                <Link href="/contact" className="menu-item-link">
                   Contact
                 </Link>
               </nav>

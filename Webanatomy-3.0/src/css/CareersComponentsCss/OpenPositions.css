@@ -136,7 +136,7 @@
   height: 44px;
   font-family: var(--font-inter), sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease;
 }
 

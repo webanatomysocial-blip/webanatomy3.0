@@ -93,34 +93,34 @@ export default function FourPhonesAnimation() {
     <section className="four-phones-animation-wrapper">
       <div className="four-phones-animation-container">
         <div className="FourPhonesAnimation-phone-img-container phone-1">
-          <img src={img1} alt="" className="FourPhonesAnimation-phone-img" />
+          <img src={img1.src} alt="" className="FourPhonesAnimation-phone-img" />
         </div>
         <div className="FourPhonesAnimation-phone-img-container phone-2">
-          <img src={img1} alt="" className="FourPhonesAnimation-phone-img" />
+          <img src={img1.src} alt="" className="FourPhonesAnimation-phone-img" />
         </div>
         <div className="FourPhonesAnimation-phone-img-container phone-3">
-          <img src={img1} alt="" className="FourPhonesAnimation-phone-img" />
+          <img src={img1.src} alt="" className="FourPhonesAnimation-phone-img" />
         </div>
         <div className="FourPhonesAnimation-phone-img-container phone-4">
-          <img src={img1} alt="" className="FourPhonesAnimation-phone-img" />
+          <img src={img1.src} alt="" className="FourPhonesAnimation-phone-img" />
         </div>
         <img
-          src={img2}
+          src={img2.src}
           alt=""
           className="FourPhonesAnimation-phone-img-overlay1 phone-overlay"
         />
         <img
-          src={img2}
+          src={img2.src}
           alt=""
           className="FourPhonesAnimation-phone-img-overlay2 phone-overlay"
         />
         <img
-          src={img2}
+          src={img2.src}
           alt=""
           className="FourPhonesAnimation-phone-img-overlay3 phone-overlay"
         />
         <img
-          src={img2}
+          src={img2.src}
           alt=""
           className="FourPhonesAnimation-phone-img-overlay4 phone-overlay"
         />

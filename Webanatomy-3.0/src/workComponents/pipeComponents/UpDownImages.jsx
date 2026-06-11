@@ -27,15 +27,15 @@ const UpDownImages = () => {
   );
 
   return (
-    <sec
+    <section
       className="UpDownImages-whole-container"
       ref={containerRef}
       style={{ height: "200vh" }}
     >
       <div className="UpDownImages-stick-img">
-        <img src={img1} alt="" />
+        <img src={img1.src} alt="" />
       </div>
-    </sec>
+    </section>
   );
 };
 

@@ -58,34 +58,34 @@ export default function WhoWeAre() {
   const statsData = [
     {
       id: 1,
-      value: 12,
-      prefix: "$",
-      suffix: " M+",
-      label: "Lorem Ipsum",
+      value: 50,
+      prefix: "",
+      suffix: "+",
+      label: "Global Clients",
       topOffset: 80, // px from top of stats section
     },
     {
       id: 2,
-      value: 18,
+      value: 80,
       prefix: "",
       suffix: "+",
-      label: "Lorem Ipsum",
+      label: "Projects Delivered",
       topOffset: 155,
     },
     {
       id: 3,
-      value: 85,
+      value: 3,
       prefix: "",
-      suffix: "+",
-      label: "Lorem Ipsum",
+      suffix: "",
+      label: "Countries",
       topOffset: 200,
     },
     {
       id: 4,
-      value: 48,
+      value: 6,
       prefix: "",
-      suffix: " M+",
-      label: "Lorem Ipsum",
+      suffix: "+",
+      label: "Years of Expertise",
       topOffset: 220,
     }
   ];
@@ -101,16 +101,13 @@ export default function WhoWeAre() {
           </div>
           <div className="who-we-are-content-right">
             <h2 className="big-head-text who-we-are-title">
-              We’re just a bunch of talented, creative people aspiring to do
-              incredible things together and have some fun along the way.
+              We are a team of engineers, designers and marketers who started WebAnatomy because we believed businesses deserved better, and we have spent every year since proving that right.
             </h2>
             <p className="who-we-are-desc">
-              We are not pixel pushers or code monkeys. At Web Anatomy, we let our
-              creativity lead the way, but we know where we're headed, and there's a
-              purpose to everything we do.
+              We are curious by nature, thorough by habit and ambitious by choice. Every project we take on gets the same level of thinking, care and craft because that is the only way we know how to work.
             </p>
             <div className="who-we-are-btn-wrapper">
-              <BlackButton text="View All Services" />
+              <BlackButton text="View All Services →" />
             </div>
           </div>
         </div>

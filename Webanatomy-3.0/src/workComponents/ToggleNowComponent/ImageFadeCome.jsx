@@ -69,14 +69,14 @@ export default function ImageFadeCome() {
     <section className="ImageFadeCome-work-section" ref={containerRef}>
       <div className="ImageFadeCome-sticky-container">
         <img
-          src={bg}
+          src={bg.src}
           className="ImageFadeCome-sticky-bg-img"
           alt=""
           ref={bgRef}
         />
         <div className="ImageFadeCome-sticky-container-left">
           <img
-            src={bg}
+            src={bg.src}
             className="ImageFadeCome-sticky-container-left-bg-img"
             alt=""
             ref={leftBgRef}
@@ -86,13 +86,13 @@ export default function ImageFadeCome() {
           </div>
         </div>
         <img
-          src={screen1}
+          src={screen1.src}
           className="ImageFadeCome-screen1-img"
           alt=""
           ref={screen1Ref}
         />
         <img
-          src={screen2}
+          src={screen2.src}
           className="ImageFadeCome-screen2-img"
           alt=""
           ref={screen2Ref}

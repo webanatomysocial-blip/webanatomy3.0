@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import Banner from "@/components/Banner";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import MultiImagesCTA from "@/components/MultiImagesCTA";
@@ -11,6 +12,8 @@ import "@/css/CaseStudiesSection.css";
 import GloballyConnected from "@/components/AboutComponents/GloballyConnected";
 
 export default function WorksPage() {
+  const router = useRouter();
+
   return (
     <>
       {/* Reusable Banner Component with props */}
@@ -18,15 +21,12 @@ export default function WorksPage() {
         title={
           <>
             Works We Are <br />Proud of
-
-            
-           
           </>
         }
         desc="Over 100 projects across India, the UK and Europe. Each one was built with the same level of thinking, care and craft."
         image={bannerImg}
         buttons={[
-          { text: "Book a Free Call" }
+          { text: "Book a Free Call", onClick: () => router.push("/contact") }
         ]}
       />
 

@@ -60,20 +60,22 @@ const ThreatSenseAIIconScroll = () => {
   );
 
   return (
-    <section className="ts-icon-scroll-main-section" ref={containerRef}>
-      <div className="ts-icon-scroll-left">
-        <div className="ts-icon-scroll-center-icon" ref={mainIconRef}>
-          <img src={tsLogo} alt="ThreatSenseAI Logo" />
-        </div>
-      </div>
-      <div className="ts-icon-scroll-right">
-        <div className="ts-icon-scroll-content">
-          <div className="ts-icon-scroll-text" ref={textRef}>
-            ThreatSenseAI
+    <div className="ts-icon-scroll-main-wrapper">
+      <section className="ts-icon-scroll-main-section" ref={containerRef}>
+        <div className="ts-icon-scroll-left" style={{ backgroundImage: `url(${behanceBg.src})` }}>
+          <div className="ts-icon-scroll-center-icon" ref={mainIconRef}>
+            <img src={tsLogo.src} alt="ThreatSenseAI Logo" />
           </div>
         </div>
-      </div>
-    </section>
+        <div className="ts-icon-scroll-right">
+          <div className="ts-icon-scroll-content">
+            <div className="ts-icon-scroll-text" ref={textRef}>
+              ThreatSenseAI
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

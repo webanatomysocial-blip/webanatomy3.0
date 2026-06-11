@@ -64,23 +64,25 @@ const ThreeImagesScroll = () => {
   );
 
   return (
-    <section className="triggertab" ref={containerRef}>
-      <div className="three-images-container">
-        <img src={img1} alt="Phone Left" className="imgleft" ref={leftImgRef} />
-        <img
-          src={img2}
-          alt="Phone Right"
-          className="imgright"
-          ref={rightImgRef}
-        />
-        <img
-          src={img3}
-          alt="iPad Center"
-          className="imgcenter"
-          ref={centerImgRef}
-        />
-      </div>
-    </section>
+    <div className="three-images-scroll-wrapper">
+      <section className="triggertab" ref={containerRef}>
+        <div className="three-images-container">
+          <img src={img1.src} alt="Phone Left" className="imgleft" ref={leftImgRef} />
+          <img
+            src={img2.src}
+            alt="Phone Right"
+            className="imgright"
+            ref={rightImgRef}
+          />
+          <img
+            src={img3.src}
+            alt="iPad Center"
+            className="imgcenter"
+            ref={centerImgRef}
+          />
+        </div>
+      </section>
+    </div>
   );
 };
 

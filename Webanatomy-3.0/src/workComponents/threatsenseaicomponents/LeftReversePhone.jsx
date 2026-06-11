@@ -44,10 +44,10 @@ export default function LeftReversePhone() {
     <>
       <section className="left-reverse-phone-section" ref={containerRef}>
         <div className="left-reverse-phone-left">
-          <img src={img1} alt="left-reverse-phone" />
+          <img src={img1.src} alt="left-reverse-phone" />
         </div>
         <div className="left-reverse-phone-right">
-          <img src={img1} alt="" />
+          <img src={img1.src} alt="" />
         </div>
       </section>
     </>

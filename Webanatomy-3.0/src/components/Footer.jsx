@@ -63,9 +63,9 @@ export default function Footer() {
           <Link href="/" className="wa-footer-link">Home</Link>
           <Link href="/services" className="wa-footer-link">Services</Link>
           <Link href="/about-us" className="wa-footer-link">About Us</Link>
-          <Link href="/projects" className="wa-footer-link">Projects</Link>
-          <Link href="/our-team" className="wa-footer-link">Our Team</Link>
-          <Link href="/gallery" className="wa-footer-link">Gallery</Link>
+          <Link href="/works" className="wa-footer-link">Case Studies</Link>
+          <Link href="/careers" className="wa-footer-link">Careers</Link>
+          <Link href="/contact" className="wa-footer-link">Contact Us</Link>
         </div>
         <div className="wa-footer-socials">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="wa-footer-link">Instagram</a>

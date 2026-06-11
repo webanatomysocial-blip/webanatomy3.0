@@ -6,20 +6,38 @@ import "@/css/AboutComponentsCss/FaqSection.css";
 const FAQ_DATA = [
   {
     id: 1,
-    question: "What digital marketing services does Web Anatomy provide?",
-    answer: "We provide comprehensive digital solutions including search engine optimization (SEO), pay-per-click advertising (PPC), social media marketing, content creation, and custom website development to scale your brand.",
+    question: "What services does WebAnatomy offer?",
+    answer: "We offer product engineering, experience design, brand identity and digital marketing, everything a business needs to build, grow and be taken seriously in the digital world.",
     defaultOpen: false,
   },
   {
     id: 2,
-    question: "How long does it take to see significant results?",
-    answer: "Results depend on the service and industry. Paid advertising can generate leads quickly, while SEO and organic growth strategies typically show significant results within 3-6 months.",
+    question: "How long does a typical project take?",
+    answer: "It depends on the scope. A website typically takes 6 to 10 weeks. A full SaaS product or web application can take anywhere from 12 to 20 weeks. We always define timelines clearly before any work begins.",
     defaultOpen: true, // always open on load / refresh as requested
   },
   {
     id: 3,
     question: "Do you work with startups and small businesses?",
-    answer: "Yes, we partner with businesses of all sizes. We design custom, budget-friendly growth strategies specifically tailored to help startups and small businesses establish authority and scale efficiently.",
+    answer: "We work with businesses at every stage, from early-stage startups building their first product to established companies scaling their digital presence. What matters to us is ambition, not size.",
+    defaultOpen: false,
+  },
+  {
+    id: 4,
+    question: "Which platforms do you manage for social media and marketing?",
+    answer: "We manage campaigns and content across Google, Meta, Instagram, LinkedIn and beyond, always as part of a unified strategy built around your specific business goals.",
+    defaultOpen: false,
+  },
+  {
+    id: 5,
+    question: "How do you measure performance?",
+    answer: "Every engagement is tied to real business outcomes, traffic, leads, conversion rates and revenue. We report clearly and consistently, so you always know exactly what the work is delivering.",
+    defaultOpen: false,
+  },
+  {
+    id: 6,
+    question: "Can WebAnatomy customise a strategy for my business?",
+    answer: "Every client we work with gets a strategy built specifically for them. We do not apply templates; we ask the right questions first and build from there.",
     defaultOpen: false,
   },
 ];

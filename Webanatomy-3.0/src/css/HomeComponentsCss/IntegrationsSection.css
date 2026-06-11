@@ -1,0 +1,218 @@
+.integrations-section {
+  background-color: #f9f9f9;
+  padding: 100px 75px;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  overflow: hidden; /* prevents scrollbars if orbit is too wide on small screens */
+}
+
+.integrations-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Left Side */
+.integrations-left {
+  flex: 1;
+  max-width: 550px;
+}
+
+.integrations-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.pill-icon {
+  font-size: 1rem;
+}
+
+.integrations-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.5rem;
+  font-family: 'Bricolage Grotesque', sans-serif; /* assuming you have this from App.jsx */
+}
+
+.integrations-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 2.5rem;
+  max-width: 480px;
+}
+
+.integrations-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.integrations-btn:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+/* Right Side */
+.integrations-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.orbit-center {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fdf570, #e0da5c 50%, #9bc298);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.orbit-ring-inner {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.orbit-ring {
+  position: absolute;
+  width: 350px; /* Diameter of the icon orbit */
+  height: 350px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0,0,0,0.12);
+  animation: spin 30s linear infinite;
+  z-index: 3;
+}
+
+.orbit-anchor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Move to radius (175px = 350px / 2) */
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateX(175px);
+}
+
+.orbit-icon-counter-spin {
+  /* Counter spin matches the main ring spin duration */
+  animation: counter-spin 30s linear infinite;
+}
+
+.orbit-icon {
+  /* Undoes the static angle so it stays completely upright */
+  transform: rotate(calc(-1 * var(--angle)));
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.orbit-icon:hover {
+  transform: rotate(calc(-1 * var(--angle))) scale(1.15);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.integrations-quote {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .integrations-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .integrations-left {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .integrations-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbit-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-ring {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .orbit-ring-inner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .orbit-anchor {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(140px);
+  }
+}

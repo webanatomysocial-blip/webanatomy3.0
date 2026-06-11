@@ -51,7 +51,8 @@ export default function ThreatsenseaiGalleryScroll({ images = [] }) {
   // Helper to get image at index, cycling through the array
   const getImage = (index) => {
     if (images.length === 0) return "";
-    return images[index % images.length];
+    const imgObj = images[index % images.length];
+    return imgObj && typeof imgObj === "object" ? imgObj.src : imgObj;
   };
 
   // Generating arrays for repeated slots in each row

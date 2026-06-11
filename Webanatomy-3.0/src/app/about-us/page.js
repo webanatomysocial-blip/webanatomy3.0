@@ -29,9 +29,13 @@ export default function AboutPage() {
             <KnowUs />
             <BuiltForFocus />
             <WhatWeCapture />
-            <ClientsRecognition />
+            <ClientsRecognition 
+              tag="✦ Clients & Recognition" 
+              title="Businesses That Trust WebAnatomy to Get It Right." 
+              statNum="100+" 
+            />
             <FoundersVision />
-            <MeetTheTeam />
+            {/* <MeetTheTeam /> */}
             <FaqSection />
             <GloballyConnected />
             <MultiImagesCTA />

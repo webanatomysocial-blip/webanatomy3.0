@@ -169,6 +169,6 @@ line-height: 1;
   pointer-events: none;
   mask-image: linear-gradient(to bottom, transparent, black) !important;
   -webkit-mask-image: linear-gradient(to bottom, transparent, black) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
 }

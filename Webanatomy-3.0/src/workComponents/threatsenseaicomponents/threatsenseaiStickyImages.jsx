@@ -65,41 +65,43 @@ export default function ThreatsenseaiStickyImages() {
   );
 
   return (
-    <section className="threatsenseai-phone-section" ref={containerRef}>
-      <div className="threatsenseai-phone-container">
-        <video
-          autoPlay
-          muted
-          loop
-          className="threatsenseai-main-img"
-          src={frontvideo}
-          alt=""
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          src={mainvideo}
-          alt=""
-          className="threatsenseai-front-img"
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          src={leftvideo}
-          alt=""
-          className="threatsenseai-left-img"
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          src={rightvideo}
-          alt=""
-          className="threatsenseai-right-img"
-        />
-      </div>
-    </section>
+    <div className="threatsenseai-phone-wrapper">
+      <section className="threatsenseai-phone-section" ref={containerRef}>
+        <div className="threatsenseai-phone-container">
+          <video
+            autoPlay
+            muted
+            loop
+            className="threatsenseai-main-img"
+            src={frontvideo}
+            alt=""
+          />
+          <video
+            autoPlay
+            muted
+            loop
+            src={mainvideo}
+            alt=""
+            className="threatsenseai-front-img"
+          />
+          <video
+            autoPlay
+            muted
+            loop
+            src={leftvideo}
+            alt=""
+            className="threatsenseai-left-img"
+          />
+          <video
+            autoPlay
+            muted
+            loop
+            src={rightvideo}
+            alt=""
+            className="threatsenseai-right-img"
+          />
+        </div>
+      </section>
+    </div>
   );
 }

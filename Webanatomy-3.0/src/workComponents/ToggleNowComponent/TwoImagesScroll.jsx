@@ -45,8 +45,8 @@ export default function TwoImagesScroll() {
 
   return (
     <section className="TwoImagesScroll-work-section" ref={containerRef}>
-      <img src={img} alt="" ref={img1Ref} />
-      <img src={img2} alt="" ref={img2Ref} />
+      <img src={img.src} alt="" ref={img1Ref} />
+      <img src={img2.src} alt="" ref={img2Ref} />
     </section>
   );
 }

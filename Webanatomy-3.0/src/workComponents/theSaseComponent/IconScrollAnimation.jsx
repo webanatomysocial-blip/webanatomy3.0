@@ -313,28 +313,30 @@ const IconScrollAnimation = () => {
   );
 
   return (
-    <section className="icon-scroll-main-section" ref={containerRef}>
-      <div className="icon-scroll-left">
-        <div className="icon-scroll-center-icon" ref={mainIconRef}>
-          <LockIcon size={100} />
+    <div className="icon-scroll-main-wrapper">
+      <section className="icon-scroll-main-section" ref={containerRef}>
+        <div className="icon-scroll-left">
+          <div className="icon-scroll-center-icon" ref={mainIconRef}>
+            <LockIcon size={100} />
+          </div>
         </div>
-      </div>
-      <div className="icon-scroll-right">
-        <div className="icon-scroll-cluster" ref={clusterRef}>
-          {Array.from({ length: 12 }).map((_, index) => {
-            const SvgComponent = ClusterSVGs[index % ClusterSVGs.length];
-            return (
-              <div
-                key={index}
-                className={`icon-scroll-cluster-item item-${index + 1}`}
-              >
-                <SvgComponent />
-              </div>
-            );
-          })}
+        <div className="icon-scroll-right">
+          <div className="icon-scroll-cluster" ref={clusterRef}>
+            {Array.from({ length: 12 }).map((_, index) => {
+              const SvgComponent = ClusterSVGs[index % ClusterSVGs.length];
+              return (
+                <div
+                  key={index}
+                  className={`icon-scroll-cluster-item item-${index + 1}`}
+                >
+                  <SvgComponent />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

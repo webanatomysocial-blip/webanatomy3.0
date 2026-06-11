@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bannerImg from "@/assets/images/about/banner.avif";
 import ScrollOverlay from "../HomeComponents/ScrollOverlay";
 
-export default function ClientsRecognition({ scrollOverlayColor = "white", title, tag }) {
+export default function ClientsRecognition({ scrollOverlayColor = "white", title, tag, statNum = "50+" }) {
   const sectionRef = useRef(null);
   const floatingImgRef = useRef(null);
 
@@ -122,7 +122,7 @@ export default function ClientsRecognition({ scrollOverlayColor = "white", title
               >
                 {card.type === "stat" ? (
                   <div className="cr-stat-content">
-                    <span className="cr-stat-num">50+</span>
+                    <span className="cr-stat-num">{statNum}</span>
                     <span className="cr-stat-lbl">Clients</span>
                   </div>
                 ) : card.type === "logo-text" ? (

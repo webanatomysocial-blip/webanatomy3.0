@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import "../css/MultiImagesCTA.css"; 
 
@@ -21,6 +22,7 @@ import cta8 from "@/assets/images/cta/WhatsApp Image 2026-06-06 at 10.32.39 AM (
 import { SiOpenai, SiAnthropic } from "react-icons/si";
 
 export default function MultiImagesCTA() {
+  const router = useRouter();
   const containerRef = useRef(null);
   const imagesRef = useRef([]);
 
@@ -141,7 +143,11 @@ export default function MultiImagesCTA() {
 
   return (
     <>
-      <div className="micta-content" ref={containerRef}>
+      <div
+        className="micta-content"
+        ref={containerRef}
+        onClick={() => router.push("/contact")}
+      >
         {imageUrls.map((src, idx) => (
           <img
             key={idx}

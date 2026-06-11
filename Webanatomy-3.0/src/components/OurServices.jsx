@@ -10,36 +10,36 @@ import s4 from '@/assets/images/Services/service-4.webp';
 const services = [
   {
     id: 1,
-    title: "Brand Identity",
-    description: "We create a clear brand identity to help your business stand out and stay consistent",
-    tags: "Strategy • Logo • Guidelines",
-    img: s1,
-    Icon: PiStarFourFill,
+    title: "Product Engineering",
+    description: "From complex SaaS platforms to consumer mobile applications built with the engineering depth that scales.",
+    tags: "Web • Mobile • SaaS Platforms",
+    img: s2,
+    Icon: PiSquaresFourFill,
     number: "Service 1"
   },
   {
     id: 2,
-    title: "Technology",
-    description: "Build fast, functional websites that support your business and work across devices",
-    tags: "Frontend • Logo • Guidelines",
-    img: s2,
-    Icon: PiSquaresFourFill,
+    title: "Experience Design",
+    description: "Interfaces and experiences designed around the people who use them, not the people who build them.",
+    tags: "UI/UX • Design Systems • Research",
+    img: s3,
+    Icon: PiSunFill,
     number: "Service 2"
   },
   {
     id: 3,
-    title: "User Experience",
-    description: "Design smooth and simple experiences that make your product easy to use",
-    tags: "Research • Logo • Guidelines",
-    img: s3,
-    Icon: PiSunFill,
+    title: "Brand & Identity",
+    description: "Identities built to command attention and hold it across every platform, every medium, every room.",
+    tags: "Logo • Guidelines • Assets",
+    img: s1,
+    Icon: PiStarFourFill,
     number: "Service 3"
   },
   {
     id: 4,
     title: "Digital Marketing",
-    description: "Create visuals and assets that help your brand.",
-    tags: "Posters • Logo • Guidelines",
+    description: "Campaigns and content that find the right audience, earn their attention and convert it into growth.",
+    tags: "SEO • Performance • Social",
     img: s4,
     Icon: PiAsteriskFill,
     number: "Service 4"
